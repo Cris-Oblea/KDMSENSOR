@@ -1,0 +1,3341 @@
+{
+ "originals": {
+  "data/arc/2d_font_ui.arc": "8e22880dd84212f712ac3d55a2cb71d3",
+  "data/arc/filter.arc": "2139ee01d64fcf08eb0e39dea0824e90",
+  "data/arc/model_shader.arc": "a8143cf56b096f97ccff29c454e970ad",
+  "data/arc/model_shader_release.arc": "0433da162ee400dc1dc6b94d0bf6f983",
+  "data/arc/resource_lists.arc": "7fa7e36066c8ff3418c7a95f9ced644f",
+  "data/arc/shader.arc": "46a81d4c3c6053c77b39f837e8102718",
+  "data/arc/song_afpr011.arc": "3516abbeb5cc25c8367fdb1dae87e84e",
+  "data/arc/song_afpr021.arc": "764276e8d86711de578e15e96976aac0",
+  "data/arc/song_bbgy011.arc": "58127ab2705c422ad18da49778748b91",
+  "data/arc/song_bbgy021.arc": "c7b13d983cc9072ec913f7f05af50bce",
+  "data/arc/song_brtu011.arc": "f2f7876c85dbe10f0fc80ca868809e2d",
+  "data/arc/song_brtu021.arc": "3ee1c177438b4ecd6aebe7e884122023",
+  "data/arc/song_btfl011.arc": "6d4b16c7cd20ff73e03ca2efabe79412",
+  "data/arc/song_btfl021.arc": "384d396a1dc2327ec9969b4dacd40440",
+  "data/arc/song_crcn011.arc": "ee844ebc615913b47576e9b7849801b0",
+  "data/arc/song_crcn021.arc": "1fcbcffbf5d90f18087af3b874bf337c",
+  "data/arc/song_csfl011.arc": "ce29b8222f691c7aaa710aacb49f6a9e",
+  "data/arc/song_csfl021.arc": "82e6698c81161707bf1b7c547f0d7380",
+  "data/arc/song_evdn011.arc": "3543aa4be684159e9329b2a5c6fed7b5",
+  "data/arc/song_evdn021.arc": "f43ca408008acc2b1c3556e7a2a05d57",
+  "data/arc/song_exot011.arc": "f678175afeb56353c59dff275a970466",
+  "data/arc/song_exot021.arc": "2f9a50474576ce7a13dc82bb801e9ca7",
+  "data/arc/song_gsdr011.arc": "92d86e32de6ffe7b396fd4ee54c14884",
+  "data/arc/song_gsdr021.arc": "4e8e72bac208e7e82263b6d1a0b91194",
+  "data/arc/song_high011.arc": "5f995de716c00a55b2da5fe5f99283c9",
+  "data/arc/song_high021.arc": "14f3ee709cff8cbe10e7c6f2cf54fde5",
+  "data/arc/song_hyst011.arc": "2bcd06efb7a8274b5b7f7faa278a49a8",
+  "data/arc/song_hyst021.arc": "3bb8d26812849200e59e77e9aab9cbb3",
+  "data/arc/song_inyh011.arc": "3c4cdcdd3370294262f4725b5343f152",
+  "data/arc/song_inyh021.arc": "c0191b6d01c16f428c38280a026aa264",
+  "data/arc/song_kmpr011.arc": "4f01c2bb1489f73d5e3205eadd13f339",
+  "data/arc/song_kmpr021.arc": "3b71be6c7ad4b7ab115c707391e713b4",
+  "data/arc/song_komv011.arc": "9bd09fb69cf999759adf27684056ce5b",
+  "data/arc/song_komv021.arc": "5c426ce82e36657d69b2e98a478ab22a",
+  "data/arc/song_lamo011.arc": "cb8d5f012e0d7002c12a66b702cf1f30",
+  "data/arc/song_lamo021.arc": "c615a75b43de7ca4abfb066c8b59753f",
+  "data/arc/song_lare011.arc": "9b4cf7540593f532405f5d4ead560df0",
+  "data/arc/song_lare021.arc": "c95480db5e83a204d923997ef146aeac",
+  "data/arc/song_lett011.arc": "633b7bc6af492806d936dc535c7c489b",
+  "data/arc/song_lett021.arc": "15b84e47000ddb65a9f91cc3898fd219",
+  "data/arc/song_lvhi011.arc": "8dca88585055422586b10f30a346724b",
+  "data/arc/song_lvhi021.arc": "277393bf61a030f28dd154200bf5ea17",
+  "data/arc/song_moss011.arc": "06e3ff9db59c4bdfce475fff594f2e3c",
+  "data/arc/song_moss021.arc": "46b90083343e6a409588e13e4b69a08e",
+  "data/arc/song_mwme011.arc": "18d43df13056d45ae9b8a370e0ba34e4",
+  "data/arc/song_mwme021.arc": "e62a2a49ab0215f22898b90420442e02",
+  "data/arc/song_noff011.arc": "3b80fa1ebac0da33aaf41f9e915357e1",
+  "data/arc/song_noff021.arc": "9b97cc685eb0e6bb18fe4d9ddd96e17a",
+  "data/arc/song_opye011.arc": "f4253819e620c7d4d5aa4d45883148d0",
+  "data/arc/song_opye021.arc": "e3463114e2d7bdc044ea9b390da153ad",
+  "data/arc/song_sakr011.arc": "7e78650a144d4d3d9c9162b285de03b7",
+  "data/arc/song_sakr021.arc": "d6be79f939e72c5f8a55bc53806f9c23",
+  "data/arc/song_secr011.arc": "d85586f9c2cee7432ae9d097c936c0ca",
+  "data/arc/song_secr021.arc": "c11d13806d48a65abca031cd1ab60a3a",
+  "data/arc/song_simh011.arc": "e11d8cdaa0f50ea723dc5f779565ba26",
+  "data/arc/song_simh021.arc": "2488abe9249706d99bd08257e7ab4204",
+  "data/arc/song_spsm011.arc": "beaea354c07fa95e84b17d2572cff8e1",
+  "data/arc/song_spsm021.arc": "e3c1ee93ce5820edfa9d5833e25f3e7f",
+  "data/arc/song_summ011.arc": "f3dd92829e3f3d9f9fe1db60afa09cb8",
+  "data/arc/song_summ021.arc": "25cef7e18cc1cce9c1d054a66d5e3b73",
+  "data/arc/song_unit011.arc": "0e0348eac5fdf2626274836e8aef11e5",
+  "data/arc/song_unit021.arc": "950b87442a98d68138706ea3bccfdc44",
+  "data/arc/song_wcwf011.arc": "62712f8d62df99044922b46f66f91200",
+  "data/arc/song_wcwf021.arc": "84c4c350d67d40aad4bd553d9b2b69f6",
+  "data/arc/song_yest011.arc": "50d28692c41aecf9a364af5e8e00ff14",
+  "data/arc/song_yest021.arc": "449c7de8990c27624d4138c4c352469b",
+  "data/arc/system_shader.arc": "efa15617ae93fad4e876aeb026a436bf",
+  "data/bm2d/difficulty_menu_v0.ifs": "6d237201fab78085515c036e54f06a09",
+  "data/sound/afpr.xsb": "9e34aa49c606f7c6c51f886c1557f28f",
+  "data/sound/afpr.xwb": "2361c4eb1d04496de64a2085778e533d",
+  "data/sound/akat.xsb": "7be33ed152434a3782d40761398187a1",
+  "data/sound/akat.xwb": "4581e652599deabde75b5cad64f4849c",
+  "data/sound/akbb.xsb": "25273eb58f096a5f43a0eefce9ef998a",
+  "data/sound/akbb.xwb": "d676dafb36cd0d2d41b4a02301381078",
+  "data/sound/alst.xsb": "569424fefc10e576d17cad79db774c60",
+  "data/sound/alst.xwb": "b3b4fa92d7f4ffff84eafb62aab93368",
+  "data/sound/bbgy.xsb": "4d007ada5c269b4af3d3492d5141d91f",
+  "data/sound/bbgy.xwb": "5213ad5bcf88e6fa62d464f346ab8714",
+  "data/sound/bgm_event01.xsb": "64099dbaf207ff88365754bbd41bd207",
+  "data/sound/bgm_event01.xwb": "b0ac174b3236abcf64d068cfaf73d0fb",
+  "data/sound/bgm_event02.xsb": "2b880f2a2ad4c0c6cd8d4f2ca5da8c5f",
+  "data/sound/bgm_event02.xwb": "2000e55dd959c00762fbfa70a889725f",
+  "data/sound/bgm_event03.xsb": "d65bf84fa6901a9b698717572f4ae861",
+  "data/sound/bgm_event03.xwb": "6eb57242089cc99b6a31dfb6b4f7b6ff",
+  "data/sound/bgm_event04.xsb": "3f9f6d1ae73b219d4a9c6699cdd0f6ea",
+  "data/sound/bgm_event04.xwb": "afc4a73f6e5386f0daaa1834cddb0fbc",
+  "data/sound/bgm_system.xsb": "5519a3496ddaf707b924193a5d4e25dd",
+  "data/sound/bgm_system.xwb": "ba9c4306eba16f0727e35f5c20f3b3e5",
+  "data/sound/bgm_thumb.xsb": "29075b74bda05a3f9bf70267496fb3b5",
+  "data/sound/bgm_thumb.xwb": "190cbf26abd686f4f88f1609ca8dc4f2",
+  "data/sound/bgm_thumb2.xsb": "fa6fda96f8d64f4367cbdbb0e361e116",
+  "data/sound/bgm_thumb2.xwb": "e2487c39fc7a973c06a49b7a6a763266",
+  "data/sound/bgm_thumb3.xsb": "4180ca9bd8c5fcc06c7e832679935908",
+  "data/sound/bgm_thumb3.xwb": "f8ea00eaa0ca6b744e4500887783f69b",
+  "data/sound/brav.xsb": "927c493969ba2a3f527c2b5a889f6feb",
+  "data/sound/brav.xwb": "d8b1ca3468d7f8de3f62f1ab500dfacd",
+  "data/sound/brtu.xsb": "86029172aacb4d6795abc31b1fdbdbd6",
+  "data/sound/brtu.xwb": "e56d14c3f673763b55293e5fc5beba39",
+  "data/sound/btfl.xsb": "823f3e6e7248df586165e36bbe502485",
+  "data/sound/btfl.xwb": "50cce4afa5c96864e816e2a0287089d0",
+  "data/sound/choc.xsb": "9e10894f9800e64a921dff3f911a3e41",
+  "data/sound/choc.xwb": "2a308733d05eef5ac8d7a231a935796b",
+  "data/sound/chuc.xsb": "bec3db30e903206309b03065caccb48d",
+  "data/sound/chuc.xwb": "c09d5ec12af2101b65c8ebb9f7426177",
+  "data/sound/circ.xsb": "2526e36af7dd1afe3f40b9baf0b6108f",
+  "data/sound/circ.xwb": "c9201c584b8bdf2fa83490d4a176a3e4",
+  "data/sound/ckpp.xsb": "c824fda5e454d98f132d7b25d1513df0",
+  "data/sound/ckpp.xwb": "71c8d934fe11d5ca8f1092b561306a9c",
+  "data/sound/cowo.xsb": "cdbf209a9111330320f84f07059adb0e",
+  "data/sound/cowo.xwb": "09a70772c71f713cedc1ba7c3b44e1f8",
+  "data/sound/crcn.xsb": "cb8d6bc95c010dd70a93d696d8b1442f",
+  "data/sound/crcn.xwb": "b92737184a083d6628dbe88bf8180b62",
+  "data/sound/csfl.xsb": "484497055b71999dea4d11dbba4c5460",
+  "data/sound/csfl.xwb": "35c2cfa3616d4cb5415403b3700aad31",
+  "data/sound/cybe.xsb": "c5a16fff1f10b15103f474cfe1215912",
+  "data/sound/cybe.xwb": "ef7ef63caadc96ce989c96723d9adea3",
+  "data/sound/dais.xsb": "99573d6833336aa554debc2f3b9023ca",
+  "data/sound/dais.xwb": "c6a3be2a4a86ab0018895f393c694e58",
+  "data/sound/dind.xsb": "fafe7ba0edcd116fd9fe0ba227f1a402",
+  "data/sound/dind.xwb": "7798184d4edc28c30dc482e7de882c35",
+  "data/sound/dmas.xgs": "facd4ff1cce419ab09e8d3b090585941",
+  "data/sound/doth.xsb": "8009064bca0f5706c3b288aae9aa1f3d",
+  "data/sound/doth.xwb": "3a0e1c20281b98805278a15216391f2f",
+  "data/sound/evdn.xsb": "83224f82c12e9e4597e267574be6956a",
+  "data/sound/evdn.xwb": "c9c687d9a7750a9702fee400e4261cf0",
+  "data/sound/exot.xsb": "64e4a1146739a9f2a7f91221d4cfaea9",
+  "data/sound/exot.xwb": "59e3c16ee5ead8fc327b26591493ae0b",
+  "data/sound/foll.xsb": "6e3867dec4e0e29970c043c5b8b27939",
+  "data/sound/foll.xwb": "57422320a6f09abca4b2df200da79685",
+  "data/sound/fuji.xsb": "dd15b39778b02661247cc1e543f48ff3",
+  "data/sound/fuji.xwb": "b470cae4ed904b4edaeeb3dc8078d29b",
+  "data/sound/funa.xsb": "dc24f068d1f68cc3bf63721877f41627",
+  "data/sound/funa.xwb": "a52033232c7d1823a7b2234ba45a873a",
+  "data/sound/fwer.xsb": "2cbc76d2ee86519d6e2f0102106bc6ba",
+  "data/sound/fwer.xwb": "e392e6538c70196dfe209aafdce02bdb",
+  "data/sound/gimm.xsb": "8f4f3de65dc267099461169c68fdedeb",
+  "data/sound/gimm.xwb": "d86247440c2811807b07d1d169ebf20d",
+  "data/sound/grre.xsb": "e7fe8419b5004165e7f505a06ed324b7",
+  "data/sound/grre.xwb": "845af1a1de8f275d45bc9362193958ce",
+  "data/sound/gsdr.xsb": "35d4ea1d6c2a23abbec264e3e4e97feb",
+  "data/sound/gsdr.xwb": "df359d168fc014226c3900c4d635c5f0",
+  "data/sound/hall.xsb": "cf098d5303c2e1d75c9d12b42209d67a",
+  "data/sound/hall.xwb": "e3c902215d97966f087f4c989392b310",
+  "data/sound/hana.xsb": "d98dfa97c4c280fe02d21c618ad3ef63",
+  "data/sound/hana.xwb": "b643ea78b7ebc39d95c8dc74b580d245",
+  "data/sound/haps.xsb": "bb363b1d6b4d3b98189c15496d7cc1ad",
+  "data/sound/haps.xwb": "2528e5b4e28e3959bfcb9a57d13afcb2",
+  "data/sound/high.xsb": "eb88bc7a4745075a8ff2cf4a84e9b0a0",
+  "data/sound/high.xwb": "377112a843d5d683ffe1559a48735c06",
+  "data/sound/howt.xsb": "aa8163349cb1a80491d9aa826d53f543",
+  "data/sound/howt.xwb": "b418934da937e41386d06cdea76a2fac",
+  "data/sound/hvro.xsb": "c2c5ed4de902a85119ca123a1c1d1118",
+  "data/sound/hvro.xwb": "f934774cc1d1527770386b5313065e7a",
+  "data/sound/hyst.xsb": "89aa630d789ac769231e898aa0187dfd",
+  "data/sound/hyst.xwb": "6fd238dfce31a755abd10413473bb2bb",
+  "data/sound/ikuz.xsb": "99f7f60d4774e355973749dc1c931976",
+  "data/sound/ikuz.xwb": "2ca4d7198246b2808573cac2e2c53993",
+  "data/sound/imso.xsb": "9cb95f723f84cd7de7ee8ede02c8f051",
+  "data/sound/imso.xwb": "05007fb23ca6e65fcd7f60e69b1634b8",
+  "data/sound/inva.xsb": "e5c84b52b2a3c8e0b589c16176efb39f",
+  "data/sound/inva.xwb": "46a2d6e4a6b9ecb4da6aee0accac2e88",
+  "data/sound/inyh.xsb": "19f46dcbc96da36e22ffed78467d05f5",
+  "data/sound/inyh.xwb": "f28e818c9e9320c444821a2a03980d20",
+  "data/sound/iron.xsb": "da6fea5b579778ad649f5724dc0cd77e",
+  "data/sound/iron.xwb": "d8b1ca3468d7f8de3f62f1ab500dfacd",
+  "data/sound/joli.xsb": "35cc004619536b8777a798da9e224e8e",
+  "data/sound/joli.xwb": "d99ad946d459f451dfd32d74e042862f",
+  "data/sound/kind.xsb": "2efe3f546c447f1b86ba88cda1957b82",
+  "data/sound/kind.xwb": "ac29e542016856940976efdf6812248d",
+  "data/sound/kmpr.xsb": "dfe78633699366bf87e070cd415516b5",
+  "data/sound/kmpr.xwb": "7a79a2b8cdefdc450bba9f5d49ba68f4",
+  "data/sound/komv.xsb": "2733324a20eb6ef676e6047b8ab1f05d",
+  "data/sound/komv.xwb": "9cd0161268dd89feb35c44ab47f15be2",
+  "data/sound/lamo.xsb": "9c51bae63d2c99330f865b2db4aa098a",
+  "data/sound/lamo.xwb": "4d665030b57885a237d05ae3657327e4",
+  "data/sound/lanj.xsb": "3b48aa17047108f273895b9aec2614c4",
+  "data/sound/lanj.xwb": "6f407321be75076eb8f0739912febbbb",
+  "data/sound/lare.xsb": "6513e44c75a36d3c4cfe43c9371a53c0",
+  "data/sound/lare.xwb": "d329e92c8d8e941989d0f0ea22488397",
+  "data/sound/lett.xsb": "996bf0039a79347982fd8d172cf8b62a",
+  "data/sound/lett.xwb": "29cb899ad4e36df1e19dbf29e85081b3",
+  "data/sound/lits.xsb": "12f41b6e83596cea483d8b274451f56f",
+  "data/sound/lits.xwb": "5163727c4f02ded919ea57a601f1725d",
+  "data/sound/loma.xsb": "3a2b77172cba0b68942b2ff9deb08c02",
+  "data/sound/loma.xwb": "95ef87a820da721bf149c2c134525cfb",
+  "data/sound/luka.xsb": "ea348e226a6e39cb4cb8ebd1b9ff5e12",
+  "data/sound/luka.xwb": "0c77ededddceb5364d63e67a1a401d41",
+  "data/sound/luvc.xsb": "f28c2b82945609a1bdf0d14a7e0a4baf",
+  "data/sound/luvc.xwb": "3ffb96813fffaa1962ef35da9181ec3c",
+  "data/sound/lvhi.xsb": "f92aee1e556fcc28a6d0b6ebfd4ba1bb",
+  "data/sound/lvhi.xwb": "aaa9b82b8367115b788bc56c95dfd026",
+  "data/sound/maji.xsb": "4a9e9b4035a70ae6825c6e0f6a7ac651",
+  "data/sound/maji.xwb": "1cc8731ba8b503f1a0ca58c7e5f1b098",
+  "data/sound/malo.xsb": "0732ffdf56b4092a2a35a1cb9d5fc27d",
+  "data/sound/malo.xwb": "89d3a356bc2afe4b141a5dd8eab56372",
+  "data/sound/maru.xsb": "9554939364c3b7fe2a1a052a81e42c65",
+  "data/sound/maru.xwb": "971cea06dda953a8c6ab42a60fe803fb",
+  "data/sound/mawa.xsb": "e84e91c0490f5931565be92110cff7db",
+  "data/sound/mawa.xwb": "9a64c6ca825771b567647eb1fe0dd1be",
+  "data/sound/megu.xsb": "3d684cc0d848290adb4cc13e9714a1e5",
+  "data/sound/megu.xwb": "d9bc10b4b46ccec6802025ad6a4b12a0",
+  "data/sound/meme.xsb": "a337ae0d8ee538728f1a83a358303221",
+  "data/sound/meme.xwb": "e7c33389f202bdf84b140c06cabf1e0a",
+  "data/sound/merm.xsb": "18e1294bcb5b8073f3e8e52a558404da",
+  "data/sound/merm.xwb": "c41691cd652d0abb45647cc19a82f0aa",
+  "data/sound/merr.xsb": "028e8fd7a3d04d365adf8aebba962a29",
+  "data/sound/merr.xwb": "b9dff49ec42f0ef20bf69fb95689b9e4",
+  "data/sound/mick.xsb": "47dfaec01c662e03c29b81e5bf800937",
+  "data/sound/mick.xwb": "1a74e1cdae3be92540175b2722faf58d",
+  "data/sound/mika.xsb": "74224f92a775b5826a2abc57d0d70809",
+  "data/sound/mika.xwb": "c52d1b2ef4c7074b2aaf7276ad5f1b0e",
+  "data/sound/moss.xsb": "f73cb120a6bb4edb4b02dfec5d53676e",
+  "data/sound/moss.xwb": "07485fab0ab19c9489866298cb9f97a0",
+  "data/sound/msou.xsb": "03c75f9d531c1392566116628e5f1c31",
+  "data/sound/msou.xwb": "cae97808b1e5fdddf303989324f35932",
+  "data/sound/mwme.xsb": "4fe4ed46c4e09311ed6e28bc824be0fb",
+  "data/sound/mwme.xwb": "4974e4764088245527e4a8d4e27365f7",
+  "data/sound/name.xsb": "6d83fda04dd941c929cac85cc8f31575",
+  "data/sound/name.xwb": "f550c7efaa2c4454b6ab4e4d485c145d",
+  "data/sound/noff.xsb": "c64eea8c1d2006aad8743ba755ac0a62",
+  "data/sound/noff.xwb": "32d770f62c7835a2acc74f15f204cb08",
+  "data/sound/obor.xsb": "0a56fa3cd4cc874f06f8eaeb3f062021",
+  "data/sound/obor.xwb": "9124ec4af3fa3623424bd4abdf9e5c71",
+  "data/sound/odop.xsb": "717212425ed2fbd524f22f2510d00ba7",
+  "data/sound/odop.xwb": "112ff0cb49321de115d00534e6b483d0",
+  "data/sound/opye.xsb": "4f9b14d9299b704981ae472259216cc2",
+  "data/sound/opye.xwb": "9e0dc8b3ec466e67aa982a2cb9aa2708",
+  "data/sound/ponp.xsb": "7da7bca924c6acd9c2869ef8a748cef6",
+  "data/sound/ponp.xwb": "3098eb3fb846bf3055af6e7ce979ad7e",
+  "data/sound/pura.xsb": "4491411c8887fb2d5b8ce3e5027b55fd",
+  "data/sound/pura.xwb": "308141c60578a7383769e5c0bc53cc48",
+  "data/sound/rena.xsb": "925e965a542576f9be39fb26f7ecba6f",
+  "data/sound/rena.xwb": "971cea06dda953a8c6ab42a60fe803fb",
+  "data/sound/rfts.xsb": "d3282fc31bc76bb893c657159ce1d59e",
+  "data/sound/rfts.xwb": "5037c23988e463b8e5a261993dc1effd",
+  "data/sound/rint.xsb": "156474e8af68c5d7ec0da9a3563b2614",
+  "data/sound/rint.xwb": "a601c2a2680739ef02de6adfdb1494cc",
+  "data/sound/sakr.xsb": "1879e921c4fe423e30d5845be375d879",
+  "data/sound/sakr.xwb": "afc0cd4a05a51ed008efdae30b0af700",
+  "data/sound/sasu.xsb": "a65e3718d917b8b5585e14cbfa3aeb05",
+  "data/sound/sasu.xwb": "478e778b3c9c9ec746e7a6500d1ed838",
+  "data/sound/se_cheer.xsb": "7f46debb011c32ad1c0bf3f8e41d4e6d",
+  "data/sound/se_cheer.xwb": "4c77b9acb9a7f4a26893b15ce4ef93a7",
+  "data/sound/se_dance.xsb": "7b0495e2b7f4a8c7e85d479bb5860c44",
+  "data/sound/se_dance.xwb": "88bbdcafffdd7a7752acabf679c8f48b",
+  "data/sound/se_event01.xsb": "d88617385003fcd10032db6d8ab2c44b",
+  "data/sound/se_event01.xwb": "0808ba9f5afe7e9ef6c956ae5c244197",
+  "data/sound/se_event02.xsb": "2d6c15768c76fcf1b7a238cc9fff9ee0",
+  "data/sound/se_event02.xwb": "97d751c4baead91ffa20d4c38c6ebcbd",
+  "data/sound/se_event04.xsb": "70b72c13a37d62ff956d4909ebe6c142",
+  "data/sound/se_event04.xwb": "7285c66022a243b5e3f0b900923fc579",
+  "data/sound/se_event05.xsb": "63536306097db7363e30e7a1dc50ae19",
+  "data/sound/se_event05.xwb": "00386421ead89798f7033722d5e4c0fe",
+  "data/sound/se_event06.xsb": "e5917b943515fd046fb25b88a8fe2a21",
+  "data/sound/se_event06.xwb": "a8953b423cdf7ffef2cf94a33f3b0659",
+  "data/sound/se_event07.xsb": "92695531acabeae8e7855433bd2f66bc",
+  "data/sound/se_event07.xwb": "e819f6908556810a7ed0e5a9a19d0ad5",
+  "data/sound/se_stage.xsb": "fdfde4371e84f42f27aeddd4a8ec8f9b",
+  "data/sound/se_stage.xwb": "12236a3f53415aee1e4cfafb3f02e0c7",
+  "data/sound/se_system.xsb": "74d960179048845003e3c35be22a959f",
+  "data/sound/se_system.xwb": "49dc3c5dfc5701edb42db361f9d58e2b",
+  "data/sound/se_system2.xsb": "af5325a33f583500d151aae5639f23fc",
+  "data/sound/se_system2.xwb": "72873d9bd9b0214d987252a8737ddb2b",
+  "data/sound/secr.xsb": "39efcc069c0260149940bb6caf2583e5",
+  "data/sound/secr.xwb": "020aa9b1c7b5e408a94ab28b2e89b453",
+  "data/sound/sett.xsb": "d65b2fb5f3c150417faa6f50770eda8b",
+  "data/sound/sett.xwb": "6ec1627eee67820172811cbd9d882182",
+  "data/sound/show.xsb": "f753149f7501e6e168cd3d31c33c6806",
+  "data/sound/show.xwb": "5d9a577bf3874175267c6664680aa13a",
+  "data/sound/simh.xsb": "bb9e3902db5952294d5508fd66ca1440",
+  "data/sound/simh.xwb": "c625f25e659625a739d8533c724dae8f",
+  "data/sound/simw.xsb": "1606d15d368badf1dc6eb7199fc9045b",
+  "data/sound/simw.xwb": "6585c8b1c26d13fc9171b0e6ad70c564",
+  "data/sound/spec.xsb": "89cb4a0416a437c1fe0806966f49df3e",
+  "data/sound/spec.xwb": "b534b8e95f3f3ba03ac05c62fe99a408",
+  "data/sound/spsm.xsb": "3686913174f09bacd3d5afb058246109",
+  "data/sound/spsm.xwb": "f66aa1bb3197e6fb9ea0166b8e71da61",
+  "data/sound/summ.xsb": "581cc5fa16cc54cbdf1bbc6c66e845ae",
+  "data/sound/summ.xwb": "bc4a4ddd7f9fe53030dfa7ff4ef16938",
+  "data/sound/swet.xsb": "fd07bfcc2af880829163789681bee37a",
+  "data/sound/swet.xwb": "3dbc5fe2bfe8342a3199f26bd377c0ac",
+  "data/sound/swra.xsb": "9d5084fc5d1dae05bf08380755486caf",
+  "data/sound/swra.xwb": "609e05e575150552b5ceb1c40faa1b5b",
+  "data/sound/tada.xsb": "44be33cb16dced9345e4d84e8a126ec5",
+  "data/sound/tada.xwb": "deb838506a26a75179c10f73ecb3ce65",
+  "data/sound/todm.xsb": "bca78af649939cfe776684f4812a0fe6",
+  "data/sound/todm.xwb": "dda1bf876ed147b1c791e0deb6a164c5",
+  "data/sound/todo.xsb": "64e09f2b965b69b42079233827b8c97f",
+  "data/sound/todo.xwb": "537c6f0e51f9d35946aeb3a21678e0a9",
+  "data/sound/tsum.xsb": "407ecad33c11189a47518ae030547b0a",
+  "data/sound/tsum.xwb": "756c8c582fdc7b360e6e4d0070263bf5",
+  "data/sound/tuto.xsb": "3f040a49f366fa827e32df0600422845",
+  "data/sound/tuto.xwb": "c4f45e8287760f601a1910dad275533b",
+  "data/sound/unit.xsb": "6ff775b3f22032517ac1aa5fe5674f75",
+  "data/sound/unit.xwb": "ceb7e0278ece98a807137e062e4f526c",
+  "data/sound/voice_dance.xsb": "a7be3815000b34a67f8b755ca0db2247",
+  "data/sound/voice_dance.xwb": "a1bf675842a46ee0d3057cb134be171d",
+  "data/sound/watc.xsb": "42156b11dfce4af55ecbd47ccd2422fe",
+  "data/sound/watc.xwb": "b3479a17b9783d82802780fbd9f0776b",
+  "data/sound/wcwf.xsb": "7baef9ae6ae9adc484624d11bb1922f5",
+  "data/sound/wcwf.xwb": "329ad0e50bf6022434fad90c4c1f6013",
+  "data/sound/woww.xsb": "2ee317f6a009bf0a931dfc06f2bf170e",
+  "data/sound/woww.xwb": "450ffc097560503909ea06dd6845546c",
+  "data/sound/zenr.xsb": "e196c46b989533e66bc87b3168bbbc67",
+  "data/sound/zenr.xwb": "86325ad93e7b84dfed0ed1a3ecd65722",
+  "modules/Kinect10.dll": "7605d8ad025d7d20a1997144e82b23c0",
+  "modules/arkkdm.dll": "7baf823d12f8adbe32c7cf61a4972b70",
+  "modules/arkkdmtest.dll": "a823ae8554dea12f70b09c74b411805c",
+  "modules/bootstrap.exe": "17f58afb9ef40e10d5834a68eaf89250",
+  "modules/ess.dll": "7f74b89d4c024f8587565e8ab71cec3e",
+  "modules/gamekdm.dll": "ed4040df5924c448de11868db3a1e242",
+  "modules/kbd.exe": "4caff70cd60f58cd82cb9b7ea3e90690",
+  "modules/kbt.dll": "47f16a8e8fc7ba32c6bede03f465d2e9",
+  "modules/kdm.dll": "d336d8c9b47afc984ee9a9341977d29a",
+  "modules/kdn.dll": "844c0864806088768f9a554a8b3dab35",
+  "modules/kdu.dll": "3666e64b8e97cad9c3243146d2e15ecb",
+  "modules/kld.dll": "e8fd5cfbd9312586069e64ac7c9831e8",
+  "modules/kma.dll": "a2191159195d8cd7ce84eef257a60221",
+  "modules/kmd.dll": "f9737b0205586d31317c38edae35b2ed",
+  "modules/kmp.dll": "7c6da8a726f85cb3120144cab18916ab",
+  "modules/ksm.dll": "73a9f221e38326dda72afa3cb3025bde",
+  "modules/kuc.dll": "29ae6c5de20382f85cbb7c52e2395704",
+  "modules/kws.dll": "6dd1824b5939fe4dea41b016d9c20f1b",
+  "modules/libacio.dll": "5a6df0cc1be460d39c1d5bc152eaefae",
+  "modules/libafp-win32.dll": "a2e0ee3c2f7a93f1cbbc805f48cbe2cd",
+  "modules/libafputils-win32.dll": "6dcb27a9bfa33e05907b7c3c7a13ca4b",
+  "modules/libavs-win32-ea3.dll": "5dfb13e58ee03ef90f77b478ff32cea9",
+  "modules/libavs-win32.dll": "0497c3ac1d54d6577b2d236c74291a4d"
+ },
+ "options": [
+  {
+   "id": "sensor",
+   "title": "Body sensor",
+   "help": "What sees the dancer. The game was made for the Kinect v1. With a webcam (or any camera Windows sees) the project's own sensor turns the picture into a Kinect skeleton: no app to install or open, everything ships in mods/webcam. Calibrate camera... sets it up; Sensor preview... shows what the game will see.",
+   "values": [
+    {
+     "id": "kinect",
+     "label": "Kinect (original)",
+     "help": "Microsoft's Kinect runtime, as the game ships.",
+     "patches": []
+    },
+    {
+     "id": "webcam",
+     "label": "Webcam or any camera",
+     "sensor": "webcam",
+     "help": "The whole body must be in the picture, feet included, as with the Kinect. Calibrate camera... once where you play (about a minute, nothing typed). Windows Studio Effects are turned off for the session where the camera allows it.",
+     "patches": []
+    }
+   ],
+   "sector": "Sensor",
+   "auto": false
+  },
+  {
+   "id": "sensorload",
+   "title": "Webcam sensor runs on",
+   "help": "Only with the webcam as Body sensor. Where its main network runs. The GPU ran the sensor better in every test (faster, lower latency, and the CPU left to the game); on a PC where the GPU cannot run it, the sensor falls back to the CPU by itself. The CPU by hand only to compare.",
+   "values": [
+    {
+     "id": "gpu",
+     "label": "GPU (DirectML; the CPU if the GPU cannot run it)",
+     "patches": []
+    },
+    {
+     "id": "cpu",
+     "label": "CPU",
+     "patches": []
+    }
+   ],
+   "sector": "Sensor",
+   "auto": false
+  },
+  {
+   "id": "language",
+   "title": "Language",
+   "help": "The language of every text and menu picture the game draws. The machine picks one at the factory. A fourth code in the game (kan, Simplified Chinese, from the Mainland China version) is not offered: Konami never shipped its pictures, and the game crashes looking for them.",
+   "values": [
+    {
+     "id": "jpn",
+     "label": "Japanese (original)",
+     "help": "As Konami set the machine.",
+     "patches": []
+    },
+    {
+     "id": "eng",
+     "label": "English",
+     "help": "The game's own English assets (*_lang_eng).",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2701056,
+       "dataDisabled": "34",
+       "dataEnabled": "28"
+      }
+     ]
+    },
+    {
+     "id": "han",
+     "label": "Chinese (Traditional)",
+     "help": "The game's own Traditional Chinese assets (*_lang_han).",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2701056,
+       "dataDisabled": "34",
+       "dataEnabled": "30"
+      }
+     ]
+    }
+   ],
+   "sector": "Content",
+   "auto": false
+  },
+  {
+   "id": "songs",
+   "title": "Song list",
+   "help": "Konami's August 2016 offline build locked 22 songs and emptied the audio of 20 of them (licences expiring). This brings them back.",
+   "values": [
+    {
+     "id": "original",
+     "label": "Original (80 songs)",
+     "help": "The song list as Konami shipped it.",
+     "patches": []
+    },
+    {
+     "id": "all",
+     "label": "Every song unlocked (102 songs)",
+     "data": [
+      "banks_restored",
+      "songlist_yesterday",
+      "yesterday",
+      "previews"
+     ],
+     "needs": [
+      "soundpath.on",
+      "soundheap.on"
+     ],
+     "help": "The 22 locked songs unlocked; the 20 emptied audio banks restored (14 are Konami's own audio, as in its October 2015 build; 6 are found only in a 2017 copy of the February 2016 build, who put them there is not known: brav iron maru merr noff rena); Konami's typo in rena's second chart fixed; YESTERDAY, its chart from the Dance Masters disc, its audio and jacket from that same 2017 copy; and the song-select preview of every song that had none, cut at the instant Konami chose for the others.",
+     "patches": []
+    }
+   ],
+   "sector": "Content",
+   "auto": false
+  },
+  {
+   "id": "titles",
+   "title": "Song titles in English",
+   "help": "In English the song list still shows Japanese titles and artists. This writes them with their official English or romanised names (from the releases and the BEMANI references), so a player can read them and look them up.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "English and romanised",
+     "data": [
+      "eng_titles_{songs}"
+     ],
+     "needs": [
+      "language.eng"
+     ],
+     "patches": []
+    }
+   ],
+   "sector": "Content",
+   "auto": false
+  },
+  {
+   "id": "stealth",
+   "title": "Stealth difficulty",
+   "lock_online": true,
+   "help": "Stealth is the hardest chart played with no step markers. For the 30 songs that came from the Dance Masters disc it copies EXTREME, because the disc had no master chart; this makes it copy MASTER, as the arcade's own songs do.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "Stealth = master everywhere",
+     "data": [
+      "stealth"
+     ],
+     "patches": []
+    }
+   ],
+   "sector": "Content",
+   "auto": false
+  },
+  {
+   "id": "rankicon",
+   "title": "Ranking event icon",
+   "help": "When a server runs a ranking event (two songs everyone competes on), the game was meant to mark those songs' difficulties with a RANKING! icon in the difficulty select, but never did: Konami's build does not load the file that holds the picture. This loads it. Nothing is drawn without an event.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original (no icon)",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "RANKING! icon on the event's songs",
+     "data": [
+      "rank_icon"
+     ],
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 346837,
+       "dataDisabled": "10",
+       "dataEnabled": "1c"
+      }
+     ]
+    }
+   ],
+   "sector": "Content",
+   "auto": false
+  },
+  {
+   "id": "eventmode",
+   "title": "Game mode",
+   "lock_online": true,
+   "help": "How a game is paid and timed, whatever the service menu's own settings say. Original: as the service menu is set. Credits: coins, as the arcade. Free play: the same game without credits. Event mode, the operator setting for shows and parties: free play with the clocks frozen (no time limit, no game over between songs); the arcade offers it only with free play on and switches it off at every boot, this keeps it on. The service menu still shows what its own settings hold.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original (the service menu's setting)",
+     "patches": []
+    },
+    {
+     "id": "credits",
+     "label": "Credits",
+     "patches": [
+      {
+       "dllName": "arkkdm.dll",
+       "offset": 6768,
+       "dataDisabled": "8a410c",
+       "dataEnabled": "b00090"
+      }
+     ]
+    },
+    {
+     "id": "freeplay",
+     "label": "Free play",
+     "patches": [
+      {
+       "dllName": "arkkdm.dll",
+       "offset": 6768,
+       "dataDisabled": "8a410c",
+       "dataEnabled": "b00190"
+      }
+     ]
+    },
+    {
+     "id": "on",
+     "label": "Event mode (free play, clocks frozen)",
+     "patches": [
+      {
+       "dllName": "arkkdm.dll",
+       "offset": 6768,
+       "dataDisabled": "8a410c",
+       "dataEnabled": "b00190"
+      },
+      {
+       "dllName": "arkkdm.dll",
+       "offset": 516608,
+       "dataDisabled": "8a80550d0000",
+       "dataEnabled": "b00190909090"
+      }
+     ]
+    }
+   ],
+   "sector": "Game rules",
+   "auto": false
+  },
+  {
+   "id": "stages",
+   "title": "Songs per game",
+   "lock_online": true,
+   "help": "How many songs a game gives before the title, whatever the service menu's STAGE setting holds. Original: the service menu's (Konami's is 2, 3 when the e-amusement extra stage applies). At most 4: the game keeps 4 stage records per player.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original (the service menu's setting)",
+     "patches": []
+    },
+    {
+     "id": "1",
+     "label": "1 song",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 316207,
+       "dataDisabled": "5424108b1491",
+       "dataEnabled": "510090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 316299,
+       "dataDisabled": "8b44241883c002",
+       "dataEnabled": "b8010000009090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 331093,
+       "dataDisabled": "8b44241840",
+       "dataEnabled": "b801000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 343110,
+       "dataDisabled": "8b44241840",
+       "dataEnabled": "b800000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 346444,
+       "dataDisabled": "3b7c241c",
+       "dataEnabled": "83ff0090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 439230,
+       "dataDisabled": "8b44243c40",
+       "dataEnabled": "b801000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 451487,
+       "dataDisabled": "8b44242440",
+       "dataEnabled": "b801000000"
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "label": "2 songs",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 316207,
+       "dataDisabled": "5424108b1491",
+       "dataEnabled": "510490909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 316299,
+       "dataDisabled": "8b44241883c002",
+       "dataEnabled": "b8020000009090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 331093,
+       "dataDisabled": "8b44241840",
+       "dataEnabled": "b802000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 343110,
+       "dataDisabled": "8b44241840",
+       "dataEnabled": "b801000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 346444,
+       "dataDisabled": "3b7c241c",
+       "dataEnabled": "83ff0190"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 439230,
+       "dataDisabled": "8b44243c40",
+       "dataEnabled": "b802000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 451487,
+       "dataDisabled": "8b44242440",
+       "dataEnabled": "b802000000"
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "label": "3 songs",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 316207,
+       "dataDisabled": "5424108b1491",
+       "dataEnabled": "510890909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 316299,
+       "dataDisabled": "8b44241883c002",
+       "dataEnabled": "b8030000009090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 331093,
+       "dataDisabled": "8b44241840",
+       "dataEnabled": "b803000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 343110,
+       "dataDisabled": "8b44241840",
+       "dataEnabled": "b802000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 346444,
+       "dataDisabled": "3b7c241c",
+       "dataEnabled": "83ff0290"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 439230,
+       "dataDisabled": "8b44243c40",
+       "dataEnabled": "b803000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 451487,
+       "dataDisabled": "8b44242440",
+       "dataEnabled": "b803000000"
+      }
+     ]
+    },
+    {
+     "id": "4",
+     "label": "4 songs",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 316207,
+       "dataDisabled": "5424108b1491",
+       "dataEnabled": "510c90909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 316299,
+       "dataDisabled": "8b44241883c002",
+       "dataEnabled": "b8040000009090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 331093,
+       "dataDisabled": "8b44241840",
+       "dataEnabled": "b804000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 343110,
+       "dataDisabled": "8b44241840",
+       "dataEnabled": "b803000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 346444,
+       "dataDisabled": "3b7c241c",
+       "dataEnabled": "83ff0390"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 439230,
+       "dataDisabled": "8b44243c40",
+       "dataEnabled": "b804000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 451487,
+       "dataDisabled": "8b44242440",
+       "dataEnabled": "b804000000"
+      }
+     ]
+    }
+   ],
+   "sector": "Game rules",
+   "auto": false
+  },
+  {
+   "id": "resolution",
+   "title": "Resolution",
+   "help": "The game renders at 1280x720. The others render natively: 3D, effects and 2D, the camera picture included; not an upscale of the 720p image. Only the modes your main screen offers are listed, since the game always runs in exclusive full screen (a higher one needs that monitor, or AMD VSR / NVIDIA DSR switched on).",
+   "values": [
+    {
+     "id": "720",
+     "label": "1280x720 (original)",
+     "patches": []
+    },
+    {
+     "id": "1080",
+     "label": "1920x1080 native",
+     "data": [
+      "shaders_1080"
+     ],
+     "mode": [
+      1920,
+      1080
+     ],
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 452,
+       "dataDisabled": "50",
+       "dataEnabled": "5c"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 544,
+       "dataDisabled": "7519",
+       "dataEnabled": "001a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 22042,
+       "dataDisabled": "f30f2ad1f30f1150080fb7570a0f57d2f30f2ad2f30f11500c",
+       "dataEnabled": "e81b4d1c00909090900fb7570a0f57d2e8ac0d200090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 37095,
+       "dataDisabled": "00050000c7442464d002",
+       "dataEnabled": "80070000c74424643804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 103994,
+       "dataDisabled": "52510c",
+       "dataEnabled": "973d1e"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 104105,
+       "dataDisabled": "f3530c",
+       "dataEnabled": "886c1e"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 164835,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "558bec83ec14e9c8c81a008b44241c83c424593b8104800100c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 492299,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 492953,
+       "dataDisabled": "d0020000688002",
+       "dataEnabled": "3804000068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 492977,
+       "dataDisabled": "d0020000688002000053688002",
+       "dataEnabled": "3804000068c00300005368c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 674166,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 978631,
+       "dataDisabled": "00050000c70588b83c10d002",
+       "dataEnabled": "80070000c70588b83c103804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 979316,
+       "dataDisabled": "00050000c7442438d002",
+       "dataEnabled": "80070000c74424383804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 980898,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "8bc85250e8b71b0e00585a8b8804800100740ab900050000bad0020000c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981383,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "1c02000068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981439,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "1c02000068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981486,
+       "dataDisabled": "2d6a50",
+       "dataEnabled": "436a78"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981533,
+       "dataDisabled": "b40000006840",
+       "dataEnabled": "0e01000068e0"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981742,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981786,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981842,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981892,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981936,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981989,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 982045,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "1c02000068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 982090,
+       "dataDisabled": "80020000be6801",
+       "dataEnabled": "c0030000be1c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 988518,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 988628,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 988926,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989036,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989134,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989246,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989455,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027348,
+       "dataDisabled": "b40000006840",
+       "dataEnabled": "0e01000068e0"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027407,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027572,
+       "dataDisabled": "b400",
+       "dataEnabled": "0e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027592,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027607,
+       "dataDisabled": "40",
+       "dataEnabled": "e0"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027631,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027941,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1028346,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1028371,
+       "dataDisabled": "d00200008d442454680005",
+       "dataEnabled": "380400008d442454688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1028401,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030355,
+       "dataDisabled": "6801",
+       "dataEnabled": "1c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030376,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030391,
+       "dataDisabled": "8002",
+       "dataEnabled": "c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030417,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030617,
+       "dataDisabled": "40010000bbb400",
+       "dataEnabled": "e0010000bb0e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031011,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031036,
+       "dataDisabled": "d00200008d4c2444680005",
+       "dataEnabled": "380400008d4c2444688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031068,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031985,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "68870000008d44247068f0000000e91c050000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032257,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "1c02000068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032321,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032844,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032869,
+       "dataDisabled": "680100008d442470688002",
+       "dataEnabled": "1c0200008d44247068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032899,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033099,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033124,
+       "dataDisabled": "b40000008d4424706840",
+       "dataEnabled": "0e0100008d44247068e0"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033154,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033277,
+       "dataDisabled": "a0005a",
+       "dataEnabled": "f00087"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033301,
+       "dataDisabled": "6a5a8d44247068a0000000",
+       "dataEnabled": "e9d7faffff909090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033329,
+       "dataDisabled": "a0005a",
+       "dataEnabled": "f00087"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033540,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033565,
+       "dataDisabled": "680100008d442470688002",
+       "dataEnabled": "1c0200008d44247068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033595,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033775,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033800,
+       "dataDisabled": "680100008d442470688002",
+       "dataEnabled": "1c0200008d44247068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033830,
+       "dataDisabled": "80026801",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033922,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033940,
+       "dataDisabled": "d002",
+       "dataEnabled": "3804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033958,
+       "dataDisabled": "0005",
+       "dataEnabled": "8007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033979,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1036425,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1041340,
+       "dataDisabled": "2d6a50",
+       "dataEnabled": "436a78"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1041548,
+       "dataDisabled": "50002d",
+       "dataEnabled": "780043"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042041,
+       "dataDisabled": "2d",
+       "dataEnabled": "43"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042054,
+       "dataDisabled": "50002d",
+       "dataEnabled": "780043"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042073,
+       "dataDisabled": "50",
+       "dataEnabled": "78"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042094,
+       "dataDisabled": "50002d",
+       "dataEnabled": "780043"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1043167,
+       "dataDisabled": "a0005a",
+       "dataEnabled": "f00087"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1043181,
+       "dataDisabled": "6a5a83c1148d44245468a0000000",
+       "dataEnabled": "e9c7360000909090909090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1043214,
+       "dataDisabled": "a0005a",
+       "dataEnabled": "f00087"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045645,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045660,
+       "dataDisabled": "d002",
+       "dataEnabled": "3804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045672,
+       "dataDisabled": "0005",
+       "dataEnabled": "8007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045695,
+       "dataDisabled": "0005d002",
+       "dataEnabled": "80073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1057209,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "688700000083c1148d44245468f0000000e92cc9ffff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1062153,
+       "dataDisabled": "00050000c786c4000000d002",
+       "dataEnabled": "80070000c786c40000003804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1070183,
+       "dataDisabled": "00050000c786d4000000d002",
+       "dataEnabled": "80070000c786d40000003804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1071431,
+       "dataDisabled": "00050000c786d4000000d002",
+       "dataEnabled": "80070000c786d40000003804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1520580,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "8b04248d54240452508b08ff51308b0424508b08ff5108e90e50ebff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1876794,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "f30f2ad1680000c03ff30f59142483c404f30f115008c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1884880,
+       "dataDisabled": "cccccccccccccccc",
+       "dataEnabled": "00050000d0020000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1905506,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "5183ec24546a008b8100800100508b10ff9298000000e94720faff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1914065,
+       "dataDisabled": "ff47105e5f5dc21800",
+       "dataEnabled": "e9f7ae020090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1919240,
+       "dataDisabled": "a12c6238108b4d1489028b1530623810",
+       "dataEnabled": "b8000500008b4d148902bad002000090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1920122,
+       "dataDisabled": "8b8804800100",
+       "dataEnabled": "e823abf1ff90"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1920176,
+       "dataDisabled": "558bec83ec",
+       "dataEnabled": "e9c0d00300"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1921712,
+       "dataDisabled": "8608800100d95c2408db8604800100",
+       "dataEnabled": "05d4ce1c10d95c2408db05d0ce1c10"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2085845,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "680000c03ff30f100c240fc6c9000f1054240c0f59d10f1154240c83c404e99813eeff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2089933,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "680000c03fd906d80c24d91ed94604d80c24d95e04d94614d80c24d95e14d94618d80c24d95e1859ff47105e5f5dc21800"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2097973,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "680000c03ff30f100c240fc6c9000f105424140f59d10f1154241483c404e948e7edff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2122715,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "f30f2ad2680000c03ff30f59142483c404f30f11500cc3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2170229,
+       "dataDisabled": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+       "dataEnabled": "e8e8f5fbff0f856366e1ff558bec83ec105356578bf18bbe04800100bb000500008b45088bc80fafc799f7fb8945f08bc10345100fafc799f7fb8945f88bbe08800100bbd00200008b450c8bc80fafc799f7fb8945f48bc10345140fafc799f7fb8945fc8d55f0528b8600800100508b08ff912c0100005f5e5b8be55dc210"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2682864,
+       "dataDisabled": "00050000d002000000050000d002000000050000d002000000050000d002",
+       "dataEnabled": "800700003804000080070000380400008007000038040000800700003804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2682912,
+       "dataDisabled": "00050000d002",
+       "dataEnabled": "800700003804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 3208763,
+       "dataDisabled": "351435",
+       "dataEnabled": "051405"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 3281745,
+       "dataDisabled": "0000000000000000000000",
+       "dataEnabled": "501d000c000000b13ebb3e"
+      }
+     ]
+    },
+    {
+     "id": "1440",
+     "label": "2560x1440 native",
+     "data": [
+      "shaders_1440"
+     ],
+     "mode": [
+      2560,
+      1440
+     ],
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 452,
+       "dataDisabled": "50",
+       "dataEnabled": "5c"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 544,
+       "dataDisabled": "7519",
+       "dataEnabled": "001a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 22042,
+       "dataDisabled": "f30f2ad1f30f1150080fb7570a0f57d2f30f2ad2f30f11500c",
+       "dataEnabled": "e81b4d1c00909090900fb7570a0f57d2e8ac0d200090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 37096,
+       "dataDisabled": "050000c7442464d002",
+       "dataEnabled": "0a0000c7442464a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 103994,
+       "dataDisabled": "52510c",
+       "dataEnabled": "973d1e"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 104105,
+       "dataDisabled": "f3530c",
+       "dataEnabled": "886c1e"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 164835,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "558bec83ec14e9c8c81a008b44241c83c424593b8104800100c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 492299,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "a005000068000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 492953,
+       "dataDisabled": "d0020000688002",
+       "dataEnabled": "a0050000680005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 492977,
+       "dataDisabled": "d0020000688002000053688002",
+       "dataEnabled": "a0050000680005000053680005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 674166,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "a005000068000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 978632,
+       "dataDisabled": "050000c70588b83c10d002",
+       "dataEnabled": "0a0000c70588b83c10a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 978897,
+       "dataDisabled": "03d0",
+       "dataEnabled": "31c0"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 978918,
+       "dataDisabled": "03d1",
+       "dataEnabled": "31c9"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 979317,
+       "dataDisabled": "050000c7442438d002",
+       "dataEnabled": "0a0000c7442438a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 979834,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "685a00000068a00000008985b0000000e968060000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 980898,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "8bc85250e8b71b0e00585a8b8804800100740ab900050000bad0020000c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981383,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "d0020000680005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981439,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "d0020000680005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981485,
+       "dataDisabled": "6a2d6a508985b0000000",
+       "dataEnabled": "e988f9ffff9090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981533,
+       "dataDisabled": "b4000000684001",
+       "dataEnabled": "68010000688002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981742,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "a005000068000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981786,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "a005000068000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981842,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "a005000068000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981892,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "a005000068000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981936,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "a005000068000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981989,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "a005000068000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 982045,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "d0020000680005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 982090,
+       "dataDisabled": "80020000be6801",
+       "dataEnabled": "00050000bed002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 988518,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 988628,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "80026801"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 988927,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989037,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989135,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989247,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989455,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1008376,
+       "dataDisabled": "cccccccccccccccccccccccccccc",
+       "dataEnabled": "68a000000083c61452e998830000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1016742,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "6a15685a00000068a0000000e908600000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027348,
+       "dataDisabled": "b4000000684001",
+       "dataEnabled": "68010000688002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027407,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "80026801"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027572,
+       "dataDisabled": "b400",
+       "dataEnabled": "6801"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027592,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "80026801"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027607,
+       "dataDisabled": "4001",
+       "dataEnabled": "8002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027631,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "80026801"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027941,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "80026801"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1028347,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1028371,
+       "dataDisabled": "d00200008d442454680005",
+       "dataEnabled": "a00500008d44245468000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1028402,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030355,
+       "dataDisabled": "6801",
+       "dataEnabled": "d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030376,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030391,
+       "dataDisabled": "8002",
+       "dataEnabled": "0005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030417,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030617,
+       "dataDisabled": "40010000bbb400",
+       "dataEnabled": "80020000bb6801"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031012,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031036,
+       "dataDisabled": "d00200008d4c2444680005",
+       "dataEnabled": "a00500008d4c244468000a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031069,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031985,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "68b40000008d4424706840010000e91c050000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032257,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "d0020000680005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032321,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032844,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032869,
+       "dataDisabled": "680100008d442470688002",
+       "dataEnabled": "d00200008d442470680005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032899,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033099,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "80026801"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033124,
+       "dataDisabled": "b40000008d442470684001",
+       "dataEnabled": "680100008d442470688002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033154,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "80026801"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033277,
+       "dataDisabled": "a0005a",
+       "dataEnabled": "4001b4"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033301,
+       "dataDisabled": "6a5a8d44247068a0000000",
+       "dataEnabled": "e9d7faffff909090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033329,
+       "dataDisabled": "a0005a",
+       "dataEnabled": "4001b4"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033540,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033565,
+       "dataDisabled": "680100008d442470688002",
+       "dataEnabled": "d00200008d442470680005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033595,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033775,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033800,
+       "dataDisabled": "680100008d442470688002",
+       "dataEnabled": "d00200008d442470680005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033830,
+       "dataDisabled": "80026801",
+       "dataEnabled": "0005d002"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033923,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033940,
+       "dataDisabled": "d002",
+       "dataEnabled": "a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033959,
+       "dataDisabled": "05",
+       "dataEnabled": "0a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033980,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1036426,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1041337,
+       "dataDisabled": "6a156a2d6a50",
+       "dataEnabled": "e9e89fffff90"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1041548,
+       "dataDisabled": "50002d",
+       "dataEnabled": "a0005a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042041,
+       "dataDisabled": "2d",
+       "dataEnabled": "5a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042054,
+       "dataDisabled": "50002d",
+       "dataEnabled": "a0005a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042072,
+       "dataDisabled": "6a5083c61452",
+       "dataEnabled": "e95b7cffff90"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042094,
+       "dataDisabled": "50002d",
+       "dataEnabled": "a0005a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1043167,
+       "dataDisabled": "a0005a",
+       "dataEnabled": "4001b4"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1043181,
+       "dataDisabled": "6a5a83c1148d44245468a0000000",
+       "dataEnabled": "e9c7360000909090909090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1043214,
+       "dataDisabled": "a0005a",
+       "dataEnabled": "4001b4"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045646,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045660,
+       "dataDisabled": "d002",
+       "dataEnabled": "a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045673,
+       "dataDisabled": "05",
+       "dataEnabled": "0a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045696,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0aa005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1057209,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "68b400000083c1148d4424546840010000e92cc9ffff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1062154,
+       "dataDisabled": "050000c786c4000000d002",
+       "dataEnabled": "0a0000c786c4000000a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1070184,
+       "dataDisabled": "050000c786d4000000d002",
+       "dataEnabled": "0a0000c786d4000000a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1071432,
+       "dataDisabled": "050000c786d4000000d002",
+       "dataEnabled": "0a0000c786d4000000a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1520580,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "8b04248d54240452508b08ff51308b0424508b08ff5108e90e50ebff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1876794,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "f30f2ad16800000040f30f59142483c404f30f115008c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1884880,
+       "dataDisabled": "cccccccccccccccc",
+       "dataEnabled": "00050000d0020000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1905506,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "5183ec24546a008b8100800100508b10ff9298000000e94720faff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1914065,
+       "dataDisabled": "ff47105e5f5dc21800",
+       "dataEnabled": "e9f7ae020090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1919240,
+       "dataDisabled": "a12c6238108b4d1489028b1530623810",
+       "dataEnabled": "b8000500008b4d148902bad002000090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1920122,
+       "dataDisabled": "8b8804800100",
+       "dataEnabled": "e823abf1ff90"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1920176,
+       "dataDisabled": "558bec83ec",
+       "dataEnabled": "e9c0d00300"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1921712,
+       "dataDisabled": "8608800100d95c2408db8604800100",
+       "dataEnabled": "05d4ce1c10d95c2408db05d0ce1c10"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2085845,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "6800000040f30f100c240fc6c9000f1054240c0f59d10f1154240c83c404e99813eeff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2089933,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "6800000040d906d80c24d91ed94604d80c24d95e04d94614d80c24d95e14d94618d80c24d95e1859ff47105e5f5dc21800"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2097973,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "6800000040f30f100c240fc6c9000f105424140f59d10f1154241483c404e948e7edff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2122715,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "f30f2ad26800000040f30f59142483c404f30f11500cc3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2170229,
+       "dataDisabled": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+       "dataEnabled": "e8e8f5fbff0f856366e1ff558bec83ec105356578bf18bbe04800100bb000500008b45088bc80fafc799f7fb8945f08bc10345100fafc799f7fb8945f88bbe08800100bbd00200008b450c8bc80fafc799f7fb8945f48bc10345140fafc799f7fb8945fc8d55f0528b8600800100508b08ff912c0100005f5e5b8be55dc210"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2682865,
+       "dataDisabled": "050000d002000000050000d002000000050000d002000000050000d002",
+       "dataEnabled": "0a0000a0050000000a0000a0050000000a0000a0050000000a0000a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2682913,
+       "dataDisabled": "050000d002",
+       "dataEnabled": "0a0000a005"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 3208763,
+       "dataDisabled": "351435",
+       "dataEnabled": "051405"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 3281745,
+       "dataDisabled": "0000000000000000000000",
+       "dataEnabled": "501d000c000000b13ebb3e"
+      }
+     ]
+    },
+    {
+     "id": "2160",
+     "label": "3840x2160 native",
+     "data": [
+      "shaders_2160"
+     ],
+     "mode": [
+      3840,
+      2160
+     ],
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 452,
+       "dataDisabled": "50",
+       "dataEnabled": "5c"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 544,
+       "dataDisabled": "7519",
+       "dataEnabled": "001a"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 22042,
+       "dataDisabled": "f30f2ad1f30f1150080fb7570a0f57d2f30f2ad2f30f11500c",
+       "dataEnabled": "e81b4d1c00909090900fb7570a0f57d2e8ac0d200090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 37096,
+       "dataDisabled": "050000c7442464d002",
+       "dataEnabled": "0f0000c74424647008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 103994,
+       "dataDisabled": "52510c",
+       "dataEnabled": "973d1e"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 104105,
+       "dataDisabled": "f3530c",
+       "dataEnabled": "886c1e"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 164835,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "558bec83ec14e9c8c81a008b44241c83c424593b8104800100c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 492299,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "7008000068000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 492953,
+       "dataDisabled": "d0020000688002",
+       "dataEnabled": "70080000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 492977,
+       "dataDisabled": "d0020000688002000053688002",
+       "dataEnabled": "70080000688007000053688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 674166,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "7008000068000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 978632,
+       "dataDisabled": "050000c70588b83c10d002",
+       "dataEnabled": "0f0000c70588b83c107008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 978897,
+       "dataDisabled": "03d0",
+       "dataEnabled": "31c0"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 978918,
+       "dataDisabled": "03d1",
+       "dataEnabled": "31c9"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 979317,
+       "dataDisabled": "050000c7442438d002",
+       "dataEnabled": "0f0000c74424387008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 979834,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "688700000068f00000008985b0000000e968060000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 980898,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "8bc85250e8b71b0e00585a8b8804800100740ab900050000bad0020000c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981383,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981439,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981485,
+       "dataDisabled": "6a2d6a508985b0000000",
+       "dataEnabled": "e988f9ffff9090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981533,
+       "dataDisabled": "b4000000684001",
+       "dataEnabled": "1c02000068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981742,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "7008000068000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981786,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "7008000068000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981842,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "7008000068000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981892,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "7008000068000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981936,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "7008000068000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 981989,
+       "dataDisabled": "d0020000680005",
+       "dataEnabled": "7008000068000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 982045,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 982091,
+       "dataDisabled": "020000be6801",
+       "dataEnabled": "070000be3804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 988519,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 988628,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 988927,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989037,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989135,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989247,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 989456,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1008376,
+       "dataDisabled": "cccccccccccccccccccccccccccc",
+       "dataEnabled": "68f000000083c61452e998830000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1016742,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "6a15688700000068f0000000e908600000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027348,
+       "dataDisabled": "b4000000684001",
+       "dataEnabled": "1c02000068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027407,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027572,
+       "dataDisabled": "b400",
+       "dataEnabled": "1c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027592,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027607,
+       "dataDisabled": "4001",
+       "dataEnabled": "c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027631,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1027941,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1028347,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1028371,
+       "dataDisabled": "d00200008d442454680005",
+       "dataEnabled": "700800008d44245468000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1028402,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030355,
+       "dataDisabled": "6801",
+       "dataEnabled": "3804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030377,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030392,
+       "dataDisabled": "02",
+       "dataEnabled": "07"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030418,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1030617,
+       "dataDisabled": "40010000bbb400",
+       "dataEnabled": "c0030000bb1c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031012,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031036,
+       "dataDisabled": "d00200008d4c2444680005",
+       "dataEnabled": "700800008d4c244468000f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031069,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1031985,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "680e0100008d44247068e0010000e91c050000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032257,
+       "dataDisabled": "68010000688002",
+       "dataEnabled": "38040000688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032322,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032845,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032869,
+       "dataDisabled": "680100008d442470688002",
+       "dataEnabled": "380400008d442470688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1032900,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033099,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033124,
+       "dataDisabled": "b40000008d442470684001",
+       "dataEnabled": "1c0200008d44247068c003"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033154,
+       "dataDisabled": "4001b400",
+       "dataEnabled": "c0031c02"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033277,
+       "dataDisabled": "a0005a00",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033301,
+       "dataDisabled": "6a5a8d44247068a0000000",
+       "dataEnabled": "e9d7faffff909090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033329,
+       "dataDisabled": "a0005a00",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033541,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033565,
+       "dataDisabled": "680100008d442470688002",
+       "dataEnabled": "380400008d442470688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033596,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033776,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033800,
+       "dataDisabled": "680100008d442470688002",
+       "dataEnabled": "380400008d442470688007"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033831,
+       "dataDisabled": "026801",
+       "dataEnabled": "073804"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033923,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033940,
+       "dataDisabled": "d002",
+       "dataEnabled": "7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033959,
+       "dataDisabled": "05",
+       "dataEnabled": "0f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1033980,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1036426,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1041337,
+       "dataDisabled": "6a156a2d6a50",
+       "dataEnabled": "e9e89fffff90"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1041548,
+       "dataDisabled": "50002d",
+       "dataEnabled": "f00087"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042040,
+       "dataDisabled": "6a2dc70617001400894e04c7460850002d",
+       "dataEnabled": "e9523b0000909090894e04c74608f00087"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042072,
+       "dataDisabled": "6a5083c61452",
+       "dataEnabled": "e95b7cffff90"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1042094,
+       "dataDisabled": "50002d",
+       "dataEnabled": "f00087"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1043167,
+       "dataDisabled": "a0005a00",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1043181,
+       "dataDisabled": "6a5a83c1148d44245468a0000000",
+       "dataEnabled": "e9c7360000909090909090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1043214,
+       "dataDisabled": "a0005a00",
+       "dataEnabled": "e0010e01"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045646,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045660,
+       "dataDisabled": "d002",
+       "dataEnabled": "7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045673,
+       "dataDisabled": "05",
+       "dataEnabled": "0f"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1045696,
+       "dataDisabled": "05d002",
+       "dataEnabled": "0f7008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1057209,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "680e01000083c1148d44245468e0010000e92cc9ffff6887000000c70617001400e9a1c4ffff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1062154,
+       "dataDisabled": "050000c786c4000000d002",
+       "dataEnabled": "0f0000c786c40000007008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1070184,
+       "dataDisabled": "050000c786d4000000d002",
+       "dataEnabled": "0f0000c786d40000007008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1071432,
+       "dataDisabled": "050000c786d4000000d002",
+       "dataEnabled": "0f0000c786d40000007008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1520580,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "8b04248d54240452508b08ff51308b0424508b08ff5108e90e50ebff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1876794,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "f30f2ad16800004040f30f59142483c404f30f115008c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1884880,
+       "dataDisabled": "cccccccccccccccc",
+       "dataEnabled": "00050000d0020000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1905506,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "5183ec24546a008b8100800100508b10ff9298000000e94720faff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1914065,
+       "dataDisabled": "ff47105e5f5dc21800",
+       "dataEnabled": "e9f7ae020090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1919240,
+       "dataDisabled": "a12c6238108b4d1489028b1530623810",
+       "dataEnabled": "b8000500008b4d148902bad002000090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1920122,
+       "dataDisabled": "8b8804800100",
+       "dataEnabled": "e823abf1ff90"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1920176,
+       "dataDisabled": "558bec83ec",
+       "dataEnabled": "e9c0d00300"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1921712,
+       "dataDisabled": "8608800100d95c2408db8604800100",
+       "dataEnabled": "05d4ce1c10d95c2408db05d0ce1c10"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2085845,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "6800004040f30f100c240fc6c9000f1054240c0f59d10f1154240c83c404e99813eeff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2089933,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "6800004040d906d80c24d91ed94604d80c24d95e04d94614d80c24d95e14d94618d80c24d95e1859ff47105e5f5dc21800"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2097973,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "6800004040f30f100c240fc6c9000f105424140f59d10f1154241483c404e948e7edff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2122715,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "f30f2ad26800004040f30f59142483c404f30f11500cc3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2170229,
+       "dataDisabled": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+       "dataEnabled": "e8e8f5fbff0f856366e1ff558bec83ec105356578bf18bbe04800100bb000500008b45088bc80fafc799f7fb8945f08bc10345100fafc799f7fb8945f88bbe08800100bbd00200008b450c8bc80fafc799f7fb8945f48bc10345140fafc799f7fb8945fc8d55f0528b8600800100508b08ff912c0100005f5e5b8be55dc210"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2682865,
+       "dataDisabled": "050000d002000000050000d002000000050000d002000000050000d002",
+       "dataEnabled": "0f000070080000000f000070080000000f000070080000000f00007008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2682913,
+       "dataDisabled": "050000d002",
+       "dataEnabled": "0f00007008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 3208763,
+       "dataDisabled": "351435",
+       "dataEnabled": "051405"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 3281745,
+       "dataDisabled": "0000000000000000000000",
+       "dataEnabled": "501d000c000000b13ebb3e"
+      }
+     ]
+    }
+   ],
+   "sector": "Picture",
+   "auto": false
+  },
+  {
+   "id": "refresh",
+   "title": "Frame rate",
+   "help": "Vsync is always on: the game never draws more frames than your monitor can show, and the songs run on real time, so they stay in sync at any frame rate. What each PC does depends on its monitor and on Windows, so if one choice does not give you what it says, try another. Before playing, close Task Manager and anything set to stay on top, on any screen: Windows then has to compose the screen, and frames get lost. You never need to change your monitor's Hz.",
+   "values": [
+    {
+     "id": "original",
+     "label": "Original: what Konami's game asks for",
+     "help": "Nothing changed: the game asks for 60 Hz. It may run at 60 fps or faster, depending on the PC; above 60 the song select runs fast. If you want more frames and stay at 60, choose Unlimited.",
+     "patches": []
+    },
+    {
+     "id": "max",
+     "label": "Unlimited: up to your monitor's maximum",
+     "env": {
+      "KDM_REFRESH": "max"
+     },
+     "help": "Asks for your monitor's highest refresh rate: as many frames as the PC can draw, up to that. The song and difficulty select keep the cabinet's speed (Konami's step once per frame, so above 60 they run faster). If the picture jumps because the PC cannot keep up, or the PC gets hot, choose Limit to 60.",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 349596,
+       "dataDisabled": "f30f11451c",
+       "dataEnabled": "e8e0c41b00"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 349632,
+       "dataDisabled": "f30f11451c",
+       "dataEnabled": "e8bcc41b00"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 349949,
+       "dataDisabled": "f30f11451c",
+       "dataEnabled": "e87fc31b00"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 434471,
+       "dataDisabled": "0186e4000000",
+       "dataEnabled": "e84f22190090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 434888,
+       "dataDisabled": "f30f1186dc000000",
+       "dataEnabled": "e8a4771a00909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 435263,
+       "dataDisabled": "83bee400000008",
+       "dataEnabled": "e84d761a009090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 479787,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "51f30f110424d90424d820e84fd11000e98c310b00"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 514999,
+       "dataDisabled": "660f5ae0e8c0c10b00",
+       "dataEnabled": "e88bb5060090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 954695,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "660f5ae083ec08f20f113424dd0424e82f920900e95a6b0800"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1213388,
+       "dataDisabled": "cccccccccccccccccccccccccccccc",
+       "dataEnabled": "dec9d800d918f30f10008d642404c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1506490,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "dec9dd1c24f20f10342483c408e9b4a0fcff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1581962,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "51e80000000059d981248d2400d8897cd1100059c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2081659,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "d986e4000000e80460f8ffdec1d99ee4000000c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2169457,
+       "dataDisabled": "ccccccccccccccccccccccccccccccc3ccccccccccccccccccccccccccccccc3cccccccccccccccccccccc",
+       "dataEnabled": "508d86dc000000e8ae37e6ff58c3ccc3508d451ce8a137e6ff58c3ccccccccc381bee400000000000041c3"
+      }
+     ]
+    },
+    {
+     "id": "cap60",
+     "label": "Limit to 60 fps",
+     "env": {
+      "KDM_FPSCAP": "60"
+     },
+     "help": "Never more than 60, whatever the PC could do: less heat and more power left over. Stability over frames: for when Unlimited and the webcam sensor together give you trouble, and for notebooks.",
+     "patches": []
+    }
+   ],
+   "sector": "Picture",
+   "auto": false
+  },
+  {
+   "id": "smaa",
+   "title": "Anti-aliasing",
+   "help": "Smooths the jagged edges of the 3D (SMAA, about 1.4 ms per frame).",
+   "values": [
+    {
+     "id": "off",
+     "label": "Off (original)",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "SMAA",
+     "env": {
+      "KDM_SMAA": "1"
+     },
+     "patches": []
+    }
+   ],
+   "sector": "Picture",
+   "auto": false
+  },
+  {
+   "id": "aniso",
+   "title": "Texture filtering",
+   "help": "Keeps floors and walls sharp at a glancing angle (anisotropic x16, about 0.4 ms).",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "Anisotropic x16",
+     "env": {
+      "KDM_ANISO": "16"
+     },
+     "patches": []
+    }
+   ],
+   "sector": "Picture",
+   "auto": false
+  },
+  {
+   "id": "soundheap",
+   "title": "Sound memory",
+   "help": "Raises the game's sound memory from 76 to 128 MB. Needed by the unlocked songs' previews (they do not fit in 76 MB and then no sound plays at all).",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original (76 MB)",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "128 MB",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2869,
+       "dataDisabled": "c004",
+       "dataEnabled": "0008"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2902,
+       "dataDisabled": "c004",
+       "dataEnabled": "0008"
+      }
+     ]
+    }
+   ],
+   "sector": "Support (switched on by the options that need it)",
+   "auto": true
+  },
+  {
+   "id": "soundpath",
+   "title": "Sound files",
+   "help": "The game reads its music and sound banks straight from data/sound, where mods cannot reach. Mods that bring audio (restored songs, previews, YESTERDAY) make it read mods/snd instead, where the launcher links every original bank plus theirs.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original folder",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "Through the mods (mods/snd)",
+     "sound": true,
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 3076994,
+       "dataDisabled": "646174612f736f756e642f",
+       "dataEnabled": "6d6f64732f736e642f0000"
+      }
+     ]
+    }
+   ],
+   "sector": "Support (switched on by the options that need it)",
+   "auto": true
+  },
+  {
+   "id": "laa",
+   "title": "Memory limit",
+   "help": "Lets the 32-bit game use 4 GB of address space instead of 2: with 2 GB it runs out of memory on a modern PC and crashes. Set on the launcher's copy of spice.exe, never on yours.",
+   "values": [
+    {
+     "id": "on",
+     "label": "4 GB",
+     "laa": true,
+     "patches": []
+    }
+   ],
+   "sector": "Support (switched on by the options that need it)",
+   "auto": true
+  },
+  {
+   "id": "demo_master",
+   "title": "Attract demo: difficulty",
+   "help": "The demo the cabinet plays while idle. Original: standard charts.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "Master charts",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 272440,
+       "dataDisabled": "01",
+       "dataEnabled": "04"
+      }
+     ]
+    }
+   ],
+   "sector": "Attract demo",
+   "auto": false
+  },
+  {
+   "id": "demo_songs",
+   "title": "Attract demo: length",
+   "help": "Original: each demo song stops after 30 seconds.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original (30 s)",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "Whole songs",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 273571,
+       "dataDisabled": "7840",
+       "dataEnabled": "4839"
+      }
+     ]
+    }
+   ],
+   "sector": "Attract demo",
+   "auto": false
+  },
+  {
+   "id": "demo_shuffle",
+   "title": "Attract demo: song order",
+   "help": "Original: two hand-picked playlists (50 songs).",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "Every song, shuffled, none twice per round",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 271876,
+       "dataDisabled": "480f8406010000",
+       "dataEnabled": "e9080100009090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 272145,
+       "dataDisabled": "8b0d84d92e10eb078da4240000000041890d84d92e1083f9237268bf69000000e8b74519008bf0e8b04519008bc8b8d5411dd4f7e18bc12bc2d1e803c2c1e8056bc0dd03c8b8d5411dd4f7e68bc62bc2d1e803c2c1e8056bc0dd03f04f8b14b5f8d82e108b048df8d82e1089148df8d82e108904b5f8d82e1075a533c9890d84d92e108b048df8d82e108b15c4cb3c108b1285c00f8875",
+       "dataEnabled": "5355e8000000005b81c3a4a52a008b7e208b4e242bcfc1f90281f9cc0000007605b9cc00000033ed33c033d23bd17d10803c13007507833c97007e014042ebec85c0751885ed75464533d23bd17dd9803c13017504c604130042ebef5150e87945190033d2f73424585933c0803c03007509833c87007e034a780340ebeec60403018943fc5d5b33c9e91cffffff5d5b33c9e913ffffff"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 3062460,
+       "dataDisabled": "2600000028000000290000002a000000320000003e0000003f000000400000004100000043000000480000004d0000004e0000005a0000000f000000250000002d0000002f00000033000000360000003700000038000000420000004400000046000000470000004b0000004c0000005000000058000000640000004f00000051000000520000005300000054000000550000005600000057000000590000005b0000005d0000005e0000005f00000060000000610000006200000063000000010000000f00000023",
+       "dataEnabled": "000000000000000000000000000000000000000000000000000000000000000002000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 3145405,
+       "dataDisabled": "332333713378337f338633903397339d33",
+       "dataEnabled": "032303710378037f038603900397039d03"
+      }
+     ]
+    }
+   ],
+   "sector": "Attract demo",
+   "auto": false
+  },
+  {
+   "id": "demo_hud",
+   "title": "Attract demo: score display",
+   "help": "Shows the SCORE bar and the COMBO during the demo, as in real play.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "Score and combo",
+     "help": "No camera picture in the demo (verified with a sensor connected).",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 643988,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "8b849d38a5070080bd71a50700000f84ac54000031c0e9a5540000"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 654520,
+       "dataDisabled": "74",
+       "dataEnabled": "eb"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 665677,
+       "dataDisabled": "8b849d38a50700",
+       "dataEnabled": "e942abffff9090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 675514,
+       "dataDisabled": "c70001000000",
+       "dataEnabled": "e876d4150090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 680949,
+       "dataDisabled": "c70001000000",
+       "dataEnabled": "e82a0f000090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 681458,
+       "dataDisabled": "c70001000000",
+       "dataEnabled": "e83d5a000090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 681605,
+       "dataDisabled": "0f8556010000",
+       "dataEnabled": "e85a3d090090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 681992,
+       "dataDisabled": "0f8566020000",
+       "dataEnabled": "909090909090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 684836,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "9c518b0f80b99505000000597506c700010000009dc3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 704564,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "9c80bf95050000007506c700010000009dc3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 1287140,
+       "dataDisabled": "cccccccccccccccccccccc",
+       "dataEnabled": "74086055e8d3c8f6ff61c3"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2106165,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "9c518b0e80b99505000000597506c700010000009dc3"
+      }
+     ]
+    }
+   ],
+   "sector": "Attract demo",
+   "auto": false
+  },
+  {
+   "id": "workers",
+   "title": "Render threads",
+   "help": "The PC build prepares each frame on ONE worker thread. This sizes the pool for your CPU at boot (CPUs - 2, between 1 and 4): smoother songs on a fast monitor.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Original (1 thread)",
+     "patches": []
+    },
+    {
+     "id": "auto",
+     "label": "Sized to the CPU",
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 979527,
+       "dataDisabled": "89b42400010000",
+       "dataEnabled": "e98f4111009090"
+      },
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 2110427,
+       "dataDisabled": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+       "dataEnabled": "60e8bf7cf3ff48487f0331c04083f8047605b8040000008984242001000061e94fbeeeff"
+      }
+     ]
+    }
+   ],
+   "sector": "Advanced",
+   "auto": false
+  },
+  {
+   "id": "verbose",
+   "title": "Diagnostic log",
+   "help": "To report a crash, a problem or how the webcam sensor did: the game, spice2x and every mod log what they do, and when the game closes a report is saved in mods\\reports (your Windows user and PC names removed). Send that zip back. Slower to start; leave it off to play.",
+   "values": [
+    {
+     "id": "off",
+     "label": "Off",
+     "patches": []
+    },
+    {
+     "id": "on",
+     "label": "Full log and report",
+     "args": [
+      "-avsverbose",
+      "-loglevel",
+      "all"
+     ],
+     "env": {
+      "KDM_DIAG": "{mods}\\active\\d3d9diag.log"
+     },
+     "patches": []
+    }
+   ],
+   "sector": "Advanced",
+   "auto": false
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+mods/bin/
+mods/webcam/
+mods/data/
+mods/conf/
+mods/active/
+mods/snd/
+mods/fixed/
+mods/reports/
+mods/update/
+mods/selection.json
+mods/setup.json
+mods/version.json
+mods/generated.state
+__pycache__/
