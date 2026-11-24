@@ -292,9 +292,16 @@ function Menu {
         $notes = New-Object Windows.Forms.LinkLabel -Property @{ Text = "Changelog"; AutoSize = $true; Margin = New-Object Windows.Forms.Padding(0, 7, 8, 0) }
         $notes.Add_LinkClicked({ Start-Process "https://github.com/$script:KdmRepo/releases" })
         $notes.Add_Enter({ $help.Text = "Changelog: every version's changes on the project's GitHub page, in your browser." })
-        $bar.Controls.AddRange(@($upd, $notes))
+        $bar.Controls.Add($upd)
     }
     $bar.Controls.Add($state)
+    # the project is open source: its public repo always in sight, to read, report or fork (the user, 2026-11-24); a row of its own, the bar is full
+    $links = New-Object Windows.Forms.FlowLayoutPanel -Property @{ Dock = "Bottom"; Height = 24; Padding = New-Object Windows.Forms.Padding(12, 2, 10, 0) }
+    $repo = New-Object Windows.Forms.LinkLabel -Property @{ Text = "github.com/$script:KdmRepo"; AutoSize = $true }
+    $repo.Add_LinkClicked({ Start-Process "https://github.com/$script:KdmRepo" })
+    $repo.Add_Enter({ $help.Text = "The project's public repository on GitHub: its source, its readme, every release and its changes. Open source: anyone can read it, report a problem or fork it." })
+    $links.Controls.Add($repo)
+    if ($installed) { $links.Controls.Add($notes) }
     $intro = "Choose your mods: every change is saved. Each option's first value is Konami's original.`r`n`r`n" +
              "Before your first game: spice2x settings..., to bind your buttons (the cabinet has no keyboard: there are no default buttons)."
     $help.Text = $intro
@@ -518,7 +525,7 @@ function Menu {
             $state.ForeColor = "DarkGoldenrod"; $state.Text = "First: spice2x settings..., to bind your buttons"; [void]$keys.Focus()
         }
     })
-    $form.Controls.AddRange(@($grid, $help, $bar))   # docked from the last: the buttons at the very bottom
+    $form.Controls.AddRange(@($grid, $help, $links, $bar))   # docked from the last: the buttons at the very bottom
     foreach ($o in $menu) { if (@((Shown $o) | ForEach-Object { $_.id }) -notcontains $sel[$o.id]) { Pick $o.id (Shown $o)[0].id } }   # a saved value this screen cannot show
     & $sync
     [void]$form.ShowDialog()

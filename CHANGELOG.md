@@ -2,6 +2,12 @@
 
 The newest version first. A release's notes are its section of this file, and are what the launcher shows before an update.
 
+## 1.0.2
+
+**The launcher**
+- The project's GitHub page, github.com/Cris-Oblea/KDMSENSOR, is linked below the buttons, with the Changelog beside it: the source, every release, and a place to report a problem or fork it.
+- The readme names the repository and the game's Asphyxia plugin, asphyxia-deac.
+
 ## 1.0.1
 
 **Content**
@@ -10,7 +16,7 @@ The newest version first. A release's notes are its section of this file, and ar
 **The launcher**
 - The window's title shows the version you have (KDMSENSOR 1.0.1).
 - Check for updates always answers in a window: you have the latest version, or why it could not look.
-- A Changelog link beside Check for updates opens every version's changes on GitHub.
+- A Changelog link opens every version's changes on GitHub.
 
 ## 1.0.0
 

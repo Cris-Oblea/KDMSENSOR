@@ -7,6 +7,11 @@
     changed: with every option on "Original" it is Konami's game exactly
     as it shipped.
 
+    Open source: github.com/Cris-Oblea/KDMSENSOR (the source, every
+    release and its changes; anyone may read it, report a problem or
+    fork it). The launcher links it below its buttons. For a server,
+    the game's own Asphyxia plugin: github.com/Cris-Oblea/asphyxia-deac
+
 
     CONTENTS
 
@@ -98,11 +103,12 @@
       "Check for updates" beside Play. It makes the same look and
       answers in a window: you have the latest version, no internet, or
       no release published yet; a newer version opens the same window.
-
-      The launcher's title shows the version you have. The "Changelog"
-      link beside the button opens every version's changes on GitHub.
       It waits while the controls, a preview or the camera calibration
       are open.
+
+      The launcher's title shows the version you have. Below its
+      buttons, the project's GitHub page and the "Changelog" link, which
+      opens every version's changes.
 
   You have a pack of the earlier kind, with "1 - Play.bat" and a
   "mods" folder (November 2026)

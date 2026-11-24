@@ -17,7 +17,7 @@ A launcher for **DanceEvolution ARCADE** (Konami, game build `KDM-001-2016080100
 
 Each option explains itself in the launcher, and the players' guide (`1 - Play (README).txt`, extracted beside the launcher) describes every one.
 
-Online, the game obeys the server: with an e-amusement server set, every option that changes judging or score stays at Konami's value.
+Online, the game obeys the server: with an e-amusement server set, every option that changes judging or score stays at Konami's value. For running a server, the game's plugin for Asphyxia CORE is [asphyxia-deac](https://github.com/Cris-Oblea/asphyxia-deac): it keeps the records, runs the weekly Progress events and shows each score's sensor from this launcher.
 
 ## Requirements
 
@@ -37,7 +37,7 @@ Online, the game obeys the server: with an e-amusement server set, every option 
 
 ## Updating
 
-The launcher's title shows the version you have; the **Changelog** link beside Check for updates opens every version's changes on GitHub. Each time it opens, and whenever you press **Check for updates** beside Play (it answers in a window: the latest version, no internet, or no release yet), the launcher looks at the latest release. If it is newer, it shows what changed, with **Update** and **Not now**. An update downloads only the parts that changed, checks the size and SHA-256 of every file, and replaces nothing until all of them are right: a failed or partial download leaves the version you have. It never writes `modules\`, `data\` or your own settings, saves and options.
+The launcher's title shows the version you have; below its buttons, the link to this repository and the **Changelog** link, which opens every version's changes. Each time it opens, and whenever you press **Check for updates** beside Play (it answers in a window: the latest version, no internet, or no release yet), the launcher looks at the latest release. If it is newer, it shows what changed, with **Update** and **Not now**. An update downloads only the parts that changed, checks the size and SHA-256 of every file, and replaces nothing until all of them are right: a failed or partial download leaves the version you have. It never writes `modules\`, `data\` or your own settings, saves and options.
 
 ## How it works
 
