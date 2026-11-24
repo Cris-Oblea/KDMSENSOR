@@ -37,7 +37,7 @@ Online, the game obeys the server: with an e-amusement server set, every option 
 
 ## Updating
 
-Each time it opens, the launcher looks at the latest release. If it is newer, it shows what changed, with **Update** and **Not now**. An update downloads only the parts that changed, checks the size and SHA-256 of every file, and replaces nothing until all of them are right: a failed or partial download leaves the version you have. It never writes `modules\`, `data\` or your own settings, saves and options.
+Each time it opens, and whenever you press **Check for updates** beside Play (it says the result in the line beside it: up to date, no internet, or no release yet), the launcher looks at the latest release. If it is newer, it shows what changed, with **Update** and **Not now**. An update downloads only the parts that changed, checks the size and SHA-256 of every file, and replaces nothing until all of them are right: a failed or partial download leaves the version you have. It never writes `modules\`, `data\` or your own settings, saves and options.
 
 ## How it works
 

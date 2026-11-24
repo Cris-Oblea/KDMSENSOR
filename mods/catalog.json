@@ -523,48 +523,36 @@
   {
    "id": "eventmode",
    "title": "Game mode",
-   "lock_online": true,
-   "help": "How a game is paid and timed, whatever the service menu's own settings say. Original: as the service menu is set. Credits: coins, as the arcade. Free play: the same game without credits. Event mode, the operator setting for shows and parties: free play with the clocks frozen (no time limit, no game over between songs); the arcade offers it only with free play on and switches it off at every boot, this keeps it on. The service menu still shows what its own settings hold.",
+   "help": "How a game is paid and timed, set as the arcade's operator sets it in the service menu (free play in COIN OPTIONS, then EVENT MODE): the same state, written for you. Original: your game's settings stay as they are. Credits: coins, as the arcade. Free play: the same game without credits. Event mode, the operator setting for shows and parties: free play with the clocks frozen (no time limit, no game over between songs); the arcade switches it off at every boot, this keeps it on. Credits and Free play are saved in your game's settings, so Original afterwards keeps the last one.",
    "values": [
     {
      "id": "off",
-     "label": "Original (the service menu's setting)",
+     "label": "Original (your game's settings)",
      "patches": []
     },
     {
      "id": "credits",
      "label": "Credits",
-     "patches": [
-      {
-       "dllName": "arkkdm.dll",
-       "offset": 6768,
-       "dataDisabled": "8a410c",
-       "dataEnabled": "b00090"
-      }
-     ]
+     "nvram": {
+      "freeplay": false
+     },
+     "patches": []
     },
     {
      "id": "freeplay",
      "label": "Free play",
-     "patches": [
-      {
-       "dllName": "arkkdm.dll",
-       "offset": 6768,
-       "dataDisabled": "8a410c",
-       "dataEnabled": "b00190"
-      }
-     ]
+     "nvram": {
+      "freeplay": true
+     },
+     "patches": []
     },
     {
      "id": "on",
      "label": "Event mode (free play, clocks frozen)",
+     "nvram": {
+      "freeplay": true
+     },
      "patches": [
-      {
-       "dllName": "arkkdm.dll",
-       "offset": 6768,
-       "dataDisabled": "8a410c",
-       "dataEnabled": "b00190"
-      },
       {
        "dllName": "arkkdm.dll",
        "offset": 516608,

@@ -61,7 +61,20 @@ function Get-KdmRelease($src, $work, [int]$seconds = 10) {
         $j = KdmJson $f
         $a = @{}; foreach ($x in $j.assets) { $a[[string]$x.name] = [string]$x.browser_download_url }
         [pscustomobject]@{ version = [version](([string]$j.tag_name).TrimStart("v")); name = [string]$j.name; body = [string]$j.body; assets = $a }
-    } catch { $null } finally { Remove-Item -LiteralPath (Join-Path $work "release.json") -Force -ErrorAction SilentlyContinue }
+    } catch { $script:KdmWhy = if ("$_" -match '\(404\)') { "none" } else { "offline" }; $null } finally { Remove-Item -LiteralPath (Join-Path $work "release.json") -Force -ErrorAction SilentlyContinue }
+}
+
+# The check the opening and the launcher's button share: { status = newer | current | offline | none; rel; text }, text being the status line.
+# GitHub answers 404 to releases/latest while the repo has no release; any other failure is the internet (or an unreadable answer).
+function Find-KdmUpdate($installed, $src, $work, [int]$seconds = 10) {
+    $script:KdmWhy = "offline"
+    $rel = Get-KdmRelease $src $work $seconds
+    if (-not $rel) {
+        if ($script:KdmWhy -eq "none") { return [pscustomobject]@{ status = "none"; rel = $null; text = "No release published yet: you have version $($installed.version)" } }
+        return [pscustomobject]@{ status = "offline"; rel = $null; text = "Could not look for updates (no internet?): you have version $($installed.version)" }
+    }
+    if ($rel.version -gt [version]$installed.version) { return [pscustomobject]@{ status = "newer"; rel = $rel; text = "Version $($rel.version) is available" } }
+    [pscustomobject]@{ status = "current"; rel = $rel; text = "Up to date: version $($installed.version)" }
 }
 
 function KdmCheckPath($p) {

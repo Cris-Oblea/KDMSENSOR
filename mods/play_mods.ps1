@@ -284,8 +284,11 @@ function Menu {
     $play = New-Object Windows.Forms.Button -Property @{ Text = "Play"; Width = 110; Height = 30 }
     $keys = New-Object Windows.Forms.Button -Property @{ Text = "spice2x settings..."; Width = 140; Height = 30 }
     $look = New-Object Windows.Forms.Button -Property @{ Text = "Sensor preview..."; Width = 130; Height = 30 }
+    $upd = New-Object Windows.Forms.Button -Property @{ Text = "Check for updates"; Width = 130; Height = 30; Enabled = $false }
     $state = New-Object Windows.Forms.Label -Property @{ AutoSize = $true; Margin = New-Object Windows.Forms.Padding(0, 7, 8, 0) }
-    $bar.Controls.AddRange(@($play, $keys, $look, $state))
+    $bar.Controls.AddRange(@($play, $keys, $look))
+    if (Get-KdmInstalled $mods) { $bar.Controls.Add($upd) }   # a release install only: the project's own folder has nothing to update
+    $bar.Controls.Add($state)
     $intro = "Choose your mods: every change is saved. Each option's first value is Konami's original.`r`n`r`n" +
              "Before your first game: spice2x settings..., to bind your buttons (the cabinet has no keyboard: there are no default buttons)."
     $help.Text = $intro
@@ -346,7 +349,7 @@ function Menu {
     $runChild = {
         param($p)
         $script:child = $p
-        $play.Enabled = $keys.Enabled = $look.Enabled = $false
+        $play.Enabled = $keys.Enabled = $look.Enabled = $upd.Enabled = $false
         $childTimer.Start()
     }
     $childTimer.Add_Tick({
@@ -354,7 +357,7 @@ function Menu {
         $childTimer.Stop()
         $script:child = $null
         $keys.Enabled = $look.Enabled = $true
-        $play.Enabled = $script:filesOk
+        $play.Enabled = $upd.Enabled = $script:filesOk
         & $sync   # spice2x settings... may have set or cleared the server
     })
     $form.Add_FormClosing({ if ($script:child -and -not $script:child.HasExited -and $script:child.ProcessName -eq "kdmsensor") { $script:child.Kill() } })
@@ -400,8 +403,8 @@ function Menu {
         }
         & $calText
         $calBtn.Add_Click({
-            $play.Enabled = $keys.Enabled = $look.Enabled = $calBtn.Enabled = $placeBtn.Enabled = $false   # only Play holds the window: the rest just waits
-            try { [void](Calibrate) } finally { $keys.Enabled = $look.Enabled = $calBtn.Enabled = $placeBtn.Enabled = $true; $play.Enabled = $script:filesOk }
+            $play.Enabled = $keys.Enabled = $look.Enabled = $upd.Enabled = $calBtn.Enabled = $placeBtn.Enabled = $false   # only Play holds the window: the rest just waits
+            try { [void](Calibrate) } finally { $keys.Enabled = $look.Enabled = $calBtn.Enabled = $placeBtn.Enabled = $true; $play.Enabled = $upd.Enabled = $script:filesOk }
             & $calText; & $sync
         })
         $calBtn.Add_Enter({ $help.Text = "Calibrate camera: once where you play, about a minute in front of the camera, nothing typed. It finds the camera's height and tilt, sets the hand cursor for your arm at shoulder height (the song selector) and checks you reach OK, checks the game keeps you when you crouch, and chooses CPU or GPU. Calibrate again if you move the camera or the room changes." })
@@ -448,6 +451,34 @@ function Menu {
         }
     })
     $form.AcceptButton = $play
+    # The look for a newer release, at opening ($manual false: says nothing when there is nothing new) and from the button ($manual: says the outcome).
+    $checkUpdate = {
+        param($manual)
+        $inst = Get-KdmInstalled $mods
+        if (-not $inst) { return }
+        $say = { param($t) $state.ForeColor = "Black"; $state.Text = $t; [Windows.Forms.Application]::DoEvents() }
+        $play.Enabled = $upd.Enabled = $false
+        & $say "Looking for updates..."
+        $r = Find-KdmUpdate $inst $null ([IO.Path]::GetTempPath())
+        if ($form.IsDisposed) { return }
+        $ready = { $state.ForeColor = "ForestGreen"; $state.Text = "Game files OK: ready to play"; $play.Enabled = $upd.Enabled = -not $script:child }
+        if ($r.status -eq "newer" -and (Show-KdmUpdate $inst $r.rel)) {
+            $form.Enabled = $false
+            try {
+                Install-KdmUpdate $root $r.rel $say
+                [void][Windows.Forms.MessageBox]::Show("Updated to version $($r.rel.version). The launcher opens again.", "DanceEvolution ARCADE")
+                Start-Process "$PSHOME\powershell.exe" -ArgumentList ('-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "{0}" -Elevated' -f $PSCommandPath)
+                $script:reopening = $true; $form.Close(); return
+            } catch {
+                [void][Windows.Forms.MessageBox]::Show("The update failed: $_`r`n`r`nYou keep version $($inst.version): nothing was replaced.", "DanceEvolution ARCADE")
+            }
+            $form.Enabled = $true
+        }
+        & $ready
+        if ($manual) { $state.Text = $r.text; if ($r.status -in "offline", "none") { $state.ForeColor = "DarkGoldenrod" } }
+    }
+    $upd.Add_Click({ & $checkUpdate $true })
+    $upd.Add_Enter({ $help.Text = "Check for updates: looks now at the project's latest release, the same look the launcher makes each time it opens. If a newer version is there it shows what changed, with Update and Not now." })
     $form.Add_Shown({
         [void]$play.Focus(); $help.Text = $intro   # the intro (bind your controls) first, not the first option's help
         $play.Enabled = $false; $state.Text = "Checking the game's files..."; [Windows.Forms.Application]::DoEvents()
@@ -471,26 +502,7 @@ function Menu {
             if ($problem) { $script:filesOk = $false; $state.ForeColor = "Firebrick"; $state.Text = "Setup needed: see below"; $help.Text = $problem; return }
             $state.ForeColor = "ForestGreen"; $state.Text = "Game files OK: ready to play"; $play.Enabled = -not $script:child
         }
-        $inst = Get-KdmInstalled $mods
-        if ($inst -and $script:filesOk) {
-            $say = { param($t) $state.ForeColor = "Black"; $state.Text = $t; [Windows.Forms.Application]::DoEvents() }
-            & $say "Looking for updates..."
-            $rel = Get-KdmRelease $null ([IO.Path]::GetTempPath())
-            if ($form.IsDisposed) { return }
-            if ($rel -and $rel.version -gt [version]$inst.version -and (Show-KdmUpdate $inst $rel)) {
-                $form.Enabled = $false
-                try {
-                    Install-KdmUpdate $root $rel $say
-                    [void][Windows.Forms.MessageBox]::Show("Updated to version $($rel.version). The launcher opens again.", "DanceEvolution ARCADE")
-                    Start-Process "$PSHOME\powershell.exe" -ArgumentList ('-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "{0}" -Elevated' -f $PSCommandPath)
-                    $form.Close(); return
-                } catch {
-                    [void][Windows.Forms.MessageBox]::Show("The update failed: $_`r`n`r`nYou keep version $($inst.version): nothing was replaced.", "DanceEvolution ARCADE")
-                }
-                $form.Enabled = $true
-            }
-            $state.ForeColor = "ForestGreen"; $state.Text = "Game files OK: ready to play"
-        }
+        if ($script:filesOk) { & $checkUpdate $false; if ($form.IsDisposed -or $script:reopening) { return } }
         $cfg = Join-Path $mods "conf\spicetools.xml"   # spice2x writes vkey 255 for a button nobody bound
         if (-not ((Test-Path -LiteralPath $cfg) -and (Select-String -LiteralPath $cfg -Pattern 'vkey="(?!255")\d+"' -Quiet))) {
             $state.ForeColor = "DarkGoldenrod"; $state.Text = "First: spice2x settings..., to bind your buttons"; [void]$keys.Focus()
@@ -598,6 +610,123 @@ function Altered {
     @($cat.originals.PSObject.Properties | Where-Object {
         $f = Join-Path $root $_.Name
         -not (Test-Path -LiteralPath $f) -or (Md5 $f) -ne $_.Value } | ForEach-Object { $_.Name })
+}
+
+# The game's saved settings (T149, the user's decision 2026-11-23): Game mode writes what the SERVICE MENU writes, so the game and a
+# server only ever see a state an operator can make. Free play is `coin.xml <freeplay>` and `testmode-v.xml <freeplay><current>`
+# (and the menu's save marks `<e_amusement><fixed>`), each file a text RC4-encrypted per 768-byte block with a key of 32 zeros, the four
+# mirrors in nvram\0..3, info.bin the directory (the MD5 of each stored file, and its own MD5 last), testmode-v.crc the crc32 of the text.
+# Read from libavs's avs-nvram.c; the same code in Python, with the proof against the user's menu-made files: _tools\mods\game_rules\nvram.py.
+function NvRc4([int]$n) {
+    $s = New-Object byte[] 256
+    for ($i = 0; $i -lt 256; $i++) { $s[$i] = $i }
+    $j = 0
+    for ($i = 0; $i -lt 256; $i++) { $j = ($j + $s[$i]) -band 255; $t = $s[$i]; $s[$i] = $s[$j]; $s[$j] = $t }
+    $o = New-Object byte[] $n; $i = 0; $j = 0
+    for ($k = 0; $k -lt $n; $k++) {
+        $i = ($i + 1) -band 255; $j = ($j + $s[$i]) -band 255; $t = $s[$i]; $s[$i] = $s[$j]; $s[$j] = $t
+        $o[$k] = $s[($s[$i] + $s[$j]) -band 255]
+    }
+    , $o
+}
+function NvXor([byte[]]$d, [byte[]]$ks) {   # the keystream repeats every ks.Length bytes (a block; info.bin's one stream is as long as the file)
+    $o = New-Object byte[] $d.Length
+    for ($i = 0; $i -lt $d.Length; $i++) { $o[$i] = $d[$i] -bxor $ks[$i % $ks.Length] }
+    , $o
+}
+function NvMd5([byte[]]$d) { , [Security.Cryptography.MD5]::Create().ComputeHash($d) }
+function NvCrc32([byte[]]$d, [int]$n) {
+    $t = New-Object 'uint32[]' 256
+    for ($i = 0; $i -lt 256; $i++) {
+        $c = [uint32]$i
+        for ($k = 0; $k -lt 8; $k++) { if ($c -band 1) { $c = [uint32](3988292384 -bxor ($c -shr 1)) } else { $c = [uint32]($c -shr 1) } }
+        $t[$i] = $c
+    }
+    $c = [uint32]4294967295
+    for ($i = 0; $i -lt $n; $i++) { $c = [uint32]($t[($c -bxor $d[$i]) -band 255] -bxor ($c -shr 8)) }
+    [uint32]($c -bxor 4294967295)
+}
+function NvRecord([byte[]]$info, [string]$name) {
+    for ($n = 0; $n -lt 128; $n++) {
+        $o = 0x28 + $n * 0xb8
+        if ([Text.Encoding]::ASCII.GetString($info, $o + 0xa8, 16).Split([char]0)[0] -eq $name) { return $o }
+    }
+    throw "$name is not in info.bin"
+}
+# a file's text as a latin-1 string (every byte one char: Shift-JIS survives the round trip) and the zeros after it
+function NvLoad($root, [byte[]]$info, $name, [byte[]]$ks) {
+    $enc = [IO.File]::ReadAllBytes((Join-Path $root "0\$name"))
+    foreach ($m in 1..3) { if (-not [Linq.Enumerable]::SequenceEqual($enc, [IO.File]::ReadAllBytes((Join-Path $root "$m\$name")))) { throw "$name : the mirrors differ" } }
+    $o = NvRecord $info $name
+    if (-not [Linq.Enumerable]::SequenceEqual((NvMd5 $enc), [byte[]]($info[($o + 0x98)..($o + 0xa7)]))) { throw "$name does not match info.bin" }
+    $plain = NvXor $enc $ks
+    $size = [int][BitConverter]::ToUInt64($info, $o + 0x90)
+    $tail = if ($size -lt $plain.Length) { [byte[]]$plain[$size..($plain.Length - 1)] } else { [byte[]]@() }
+    @{ text = [Text.Encoding]::GetEncoding(28591).GetString($plain, 0, $size); tail = $tail }
+}
+function NvSet($f, [string]$pattern, [string]$v) {
+    $rx = New-Object Text.RegularExpressions.Regex($pattern, "Singleline")
+    if (-not $rx.IsMatch($f.text)) { throw "a setting is not where the menu keeps it" }
+    $f.text = $rx.Replace($f.text, ('${1}' + $v + '${3}'), 1)
+}
+# Free play on or off, as the menu writes it; returns the files changed ('' when the settings already were so). Throws, writing nothing, when
+# the settings are not what this knows (another layout, half written, mirrors apart): the game is then started as it is.
+function NvSetFreePlay($root, [bool]$on) {
+    $nv = Join-Path $root "info.bin.new"
+    if ((Test-Path -LiteralPath $nv) -and (Get-Item -LiteralPath $nv).Length) { throw "a write is pending (info.bin.new): start the game once first" }
+    $info = NvXor ([IO.File]::ReadAllBytes((Join-Path $root "info.bin"))) (NvRc4 23636)
+    $head = [BitConverter]::ToUInt32($info, 4), [BitConverter]::ToUInt32($info, 8), [BitConverter]::ToUInt32($info, 12)
+    if ($info.Length -ne 23636 -or $info[0] -ne 0x5a -or $info[1] -ne 0xc0 -or $info[2] -ne 0x38 -or $info[3] -ne 0xda -or ($head -join ",") -ne "768,4,128") { throw "info.bin is not the layout this knows" }
+    if (-not [Linq.Enumerable]::SequenceEqual((NvMd5 ([byte[]]$info[0..(23636 - 17)])), [byte[]]$info[(23636 - 16)..(23636 - 1)])) { throw "info.bin's own MD5 does not match: start the game once first" }
+    $ks = NvRc4 768
+    $v = if ($on) { "1" } else { "0" }
+    $coin = NvLoad $root $info "coin.xml" $ks
+    $test = NvLoad $root $info "testmode-v.xml" $ks
+    $was = $coin.text + "|" + $test.text
+    NvSet $coin '(<freeplay __type="u8">)([01])(</freeplay>)' $v
+    NvSet $test '(<freeplay>.*?<current __type="s32">)([01])(</current>)' $v
+    if (($coin.text + "|" + $test.text) -ne $was) { NvSet $test '(<e_amusement>.*?<fixed __type="s32">)([01])(</fixed>)' "1" }   # the menu's save marks it; only when something is saved
+    $l1 = [Text.Encoding]::GetEncoding(28591)
+    $out = [ordered]@{}
+    foreach ($p in @(@("coin.xml", $coin), @("testmode-v.xml", $test))) { $out[$p[0]] = NvXor ([byte[]]($l1.GetBytes($p[1].text) + $p[1].tail)) $ks }
+    $textBytes = $l1.GetBytes($test.text)
+    $crc = New-Object byte[] ([IO.File]::ReadAllBytes((Join-Path $root "0\testmode-v.crc")).Length)
+    [BitConverter]::GetBytes([uint32](NvCrc32 $textBytes $textBytes.Length)).CopyTo($crc, 0)   # the text's size is exact: its zeros are not in it
+    $out["testmode-v.crc"] = NvXor $crc $ks
+    $changed = @()
+    foreach ($name in $out.Keys) {
+        $o = NvRecord $info $name
+        $md5 = NvMd5 $out[$name]
+        if (-not [Linq.Enumerable]::SequenceEqual($md5, [byte[]]$info[($o + 0x98)..($o + 0xa7)])) { $changed += $name; $md5.CopyTo($info, $o + 0x98) }
+    }
+    if (-not $changed) { return "" }
+    foreach ($name in $changed) { foreach ($m in 0..3) { [IO.File]::WriteAllBytes((Join-Path $root "$m\$name"), $out[$name]) } }
+    # the game stats every mirror file and compares it with its record (+0x18 per mirror: creation ms, write ms, size, u64 each; a mismatch
+    # makes the module "broken" and every setting go back to its default): the record takes the files as they now are
+    foreach ($name in $changed) {
+        $o = NvRecord $info $name
+        foreach ($m in 0..3) {
+            $it = Get-Item -LiteralPath (Join-Path $root "$m\$name")
+            $ms = @([DateTimeOffset]::new($it.CreationTimeUtc).ToUnixTimeMilliseconds(), [DateTimeOffset]::new($it.LastWriteTimeUtc).ToUnixTimeMilliseconds(), $it.Length)
+            for ($k = 0; $k -lt 3; $k++) { [BitConverter]::GetBytes([uint64]$ms[$k]).CopyTo($info, $o + 0x18 * $m + 8 * $k) }
+        }
+    }
+    (NvMd5 ([byte[]]$info[0..(23636 - 17)])).CopyTo($info, 23636 - 16)
+    [IO.File]::WriteAllBytes((Join-Path $root "info.bin"), (NvXor $info (NvRc4 23636)))   # last: until then the old digests stand for the old files
+    $changed -join ", "
+}
+# Before the game starts: the chosen Game mode's free play into the player's settings. Original has none: the player's own stay as they are.
+# shortcut: with no settings yet (the very first start) nothing is written, the game makes them and the next start applies the mode.
+function GameSettings($chosen) {
+    $v = @($chosen | Where-Object { $_.PSObject.Properties["nvram"] })
+    if (-not $v) { return }
+    $root = Join-Path $mods "conf\nvram"
+    if (-not (Test-Path -LiteralPath (Join-Path $root "info.bin"))) { Write-Host "game settings: none yet (the game makes them at its first start); Game mode applies from the next start"; return }
+    try {
+        $on = [bool]$v[0].nvram.freeplay
+        $c = NvSetFreePlay $root $on
+        Write-Host ("game settings: free play {0}{1}" -f $(if ($on) { "on" } else { "off" }), $(if ($c) { " (written: $c)" } else { " (already so)" }))
+    } catch { Write-Host ("game settings: not changed ({0}); the game starts with the settings it has" -f $_) }
 }
 
 function Build {
@@ -716,12 +845,26 @@ foreach ($v in $chosen) {
 # + the Song list (0 Konami's, 1 every song unlocked); the DEAC plugin reads it (ARCHITECTURE.md 16.11). trace.ps1 -Online takes the tail from launch.json.
 $eff = Eff
 $pcbidTail = "DE" + $(if ($eff["sensor"] -eq "webcam") { "1" } else { "0" }) + $(if ($eff["songs"] -eq "all") { "1" } else { "0" })
-@{ args = $spiceArgs; env = $envs; pcbid_tail = $pcbidTail } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $active "launch.json")   # for trace.ps1 -Mods
+# The same mark in the model's revision letter (T146, ARCHITECTURE.md 16.21): every core hands a plugin the model (the official one hands no PCBID):
+# D Kinect + Konami's Song list, E Kinect + every song, F camera + Konami's, G camera + every song. Konami's own letter is A.
+$revMark = [string]"DEFG"[2 * [int]($eff["sensor"] -eq "webcam") + [int]($eff["songs"] -eq "all")]
+@{ args = $spiceArgs; env = $envs; pcbid_tail = $pcbidTail; rev_mark = $revMark } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $active "launch.json")   # for trace.ps1 -Mods
 # Only for a server on this PC or its own network (the DEAC plugin's core): a public network (RyuNET) knows the machine by the PCBID it
-# registered, so that one is never changed. Offline the game keeps the player's p too. spice2x takes the settings FILE's p over a
-# command-line -p (measured 2026-11-22: the game sent the file's), so the mark goes into a copy of the file in mods\active that -cfgpath points to.
+# registered, so that one is never changed, and its model is left as Konami's too (its own plugin is unread: the user decides when a public server
+# is to get the mark). Offline the game keeps the player's p too. spice2x takes the settings FILE's p over a
+# command-line -p (measured 2026-11-22: the game sent the file's), so the mark goes into a copy of the file in mods\active that -cfgpath points to;
+# the revision letter goes into a copy of eamuse-config.xml the same way (-e), every other byte of it as shipped (latin-1 round trip).
 # shortcut: a p that is not 20 hex characters is left alone (no mark is sent), not repaired.
 if ((ServerUrl) -match '^https?://(localhost|127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)') {
+    try {
+        $l1 = [Text.Encoding]::GetEncoding(28591)
+        $ea = $l1.GetString([IO.File]::ReadAllBytes((Join-Path $mods "conf\eamuse-config.xml")))
+        $ea2 = [regex]::Replace($ea, '(<rev __type="str">)[^<]*(</rev>)', ('${1}' + $revMark + '${2}'))
+        if ($ea2 -ceq $ea -and $ea -cnotmatch ('<rev __type="str">' + $revMark + '</rev>')) { throw "no <rev> in eamuse-config.xml" }
+        $eaCopy = Join-Path $active "eamuse-config.xml"
+        [IO.File]::WriteAllBytes($eaCopy, $l1.GetBytes($ea2))
+        $spiceArgs[[array]::IndexOf($spiceArgs, "-e") + 1] = $eaCopy
+    } catch { Write-Host ("online: could not mark the model ({0}); the server gets none that way" -f $_) }
     try {
         $x = New-Object Xml.XmlDocument; $x.Load((Join-Path $mods "conf\spicetools.xml"))
         $opt = $x.SelectSingleNode("//game[@name='Dance Evolution']/options/option[@name='p']")
@@ -755,6 +898,7 @@ function FirewallRules($exe) {
     } catch { Write-Host ("firewall: could not add the rules ({0}); Windows may ask on the first game" -f $_) }
 }
 FirewallRules (Join-Path $active "spice.exe")
+GameSettings $chosen   # before the NoLaunch exit: trace.ps1 builds with -NoLaunch and then starts the game itself
 if ($NoLaunch) { exit 0 }
 
 # Before: the game's files are Konami's (the window checked them when it opened; -Select has no window).

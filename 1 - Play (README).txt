@@ -94,6 +94,13 @@
       Your options, buttons, saves and calibration are never touched,
       and neither is Konami's game. Offline, it just opens.
 
+      To look for an update without reopening the launcher, press
+      "Check for updates" beside Play. It makes the same look and says
+      the result in the line beside it: up to date, no internet, or no
+      release published yet; a newer version opens the same window.
+      It waits while the controls, a preview or the camera calibration
+      are open.
+
   You have a pack of the earlier kind, with "1 - Play.bat" and a
   "mods" folder (November 2026)
 
@@ -134,7 +141,7 @@
       options and buttons (bind your keys or pad here). Its
       Options tab also holds the e-amusement server's URL (for online
       play). With a server set, the options that change the score
-      (Stealth difficulty, Game mode, Songs per game) stay at Konami's
+      (Stealth difficulty, Songs per game) stay at Konami's
       value and show greyed: online, the game is the server's. Clear
       the URL and they work again.
 
@@ -315,10 +322,11 @@
   ----------
 
   Game mode
-      Original (the service menu's setting)  |  Credits  |  Free play  |
+      Original (your game's settings)  |  Credits  |  Free play  |
       Event mode (free play, clocks frozen)
-      How a game is paid and timed. Event mode has no time limit and
-      no game over between songs.
+      How a game is paid and timed, set as the arcade's operator sets it
+      (it works online too). Credits and Free play are saved in your game's
+      settings. Event mode has no time limit and no game over between songs.
 
   Songs per game
       Original (the service menu's setting)  |  1 song  |  2 songs  |
