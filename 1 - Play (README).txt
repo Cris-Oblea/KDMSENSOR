@@ -95,9 +95,12 @@
       and neither is Konami's game. Offline, it just opens.
 
       To look for an update without reopening the launcher, press
-      "Check for updates" beside Play. It makes the same look and says
-      the result in the line beside it: up to date, no internet, or no
-      release published yet; a newer version opens the same window.
+      "Check for updates" beside Play. It makes the same look and
+      answers in a window: you have the latest version, no internet, or
+      no release published yet; a newer version opens the same window.
+
+      The launcher's title shows the version you have. The "Changelog"
+      link beside the button opens every version's changes on GitHub.
       It waits while the controls, a preview or the camera calibration
       are open.
 
@@ -280,7 +283,7 @@
       Every text and menu picture, from the game's own assets.
 
   Song list
-      Original (80 songs)  |  Every song unlocked (102 songs)
+      Original (78 songs)  |  Every song unlocked (101 songs)
       Konami's last offline build locked 22 songs and emptied the audio
       of 20 of them. This brings them all back, adds YESTERDAY, and
       gives a song-select preview to every song that had none:

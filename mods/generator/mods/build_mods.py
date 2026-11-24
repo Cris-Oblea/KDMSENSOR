@@ -95,10 +95,10 @@ OPTIONS = [
          help=txt("Konami's August 2016 offline build locked 22 songs and emptied the audio of 20 of",
                 "them (licences expiring). This brings them back."),
          values=[
-             dict(id="original", label="Original (80 songs)", help="The song list as Konami shipped it."),
+             dict(id="original", label="Original (78 songs)", help="The song list as Konami shipped it."),
              # one value since 2026-10-27, previews included (the user: unlocking is everything, each song whole,
              # nothing separate); check_songlist() proves the shipped list, yest taken out, against Konami's
-             dict(id="all", label="Every song unlocked (102 songs)",
+             dict(id="all", label="Every song unlocked (101 songs)",
                   data=["banks_restored", "songlist_yesterday", "yesterday", "previews"],
                   needs=["soundpath.on", "soundheap.on"],
                   help=txt("The 22 locked songs unlocked; the 20 emptied audio banks restored (14 are Konami's own audio,",

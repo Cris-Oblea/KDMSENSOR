@@ -9,7 +9,7 @@ A launcher for **DanceEvolution ARCADE** (Konami, game build `KDM-001-2016080100
 
 | Sector | Options |
 |---|---|
-| Content | Language (English, Traditional Chinese, Japanese), every song unlocked (102 songs, previews and fade-outs for all), English song titles, Stealth played as Master |
+| Content | Language (English, Traditional Chinese, Japanese), every song unlocked (101 songs, previews and fade-outs for all), English song titles, Stealth played as Master |
 | Game rules | Game mode (credits, free play, event mode), 1 to 4 songs per game |
 | Picture | Native 1080p, 1440p and 2160p (3D, effects, 2D and the camera picture), unlimited frame rate, SMAA, anisotropic filtering, render threads |
 | Attract demo | Master charts, whole songs, every song shuffled, score and combo shown |
@@ -37,7 +37,7 @@ Online, the game obeys the server: with an e-amusement server set, every option 
 
 ## Updating
 
-Each time it opens, and whenever you press **Check for updates** beside Play (it says the result in the line beside it: up to date, no internet, or no release yet), the launcher looks at the latest release. If it is newer, it shows what changed, with **Update** and **Not now**. An update downloads only the parts that changed, checks the size and SHA-256 of every file, and replaces nothing until all of them are right: a failed or partial download leaves the version you have. It never writes `modules\`, `data\` or your own settings, saves and options.
+The launcher's title shows the version you have; the **Changelog** link beside Check for updates opens every version's changes on GitHub. Each time it opens, and whenever you press **Check for updates** beside Play (it answers in a window: the latest version, no internet, or no release yet), the launcher looks at the latest release. If it is newer, it shows what changed, with **Update** and **Not now**. An update downloads only the parts that changed, checks the size and SHA-256 of every file, and replaces nothing until all of them are right: a failed or partial download leaves the version you have. It never writes `modules\`, `data\` or your own settings, saves and options.
 
 ## How it works
 

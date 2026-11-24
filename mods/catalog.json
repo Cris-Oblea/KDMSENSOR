@@ -419,13 +419,13 @@
    "values": [
     {
      "id": "original",
-     "label": "Original (80 songs)",
+     "label": "Original (78 songs)",
      "help": "The song list as Konami shipped it.",
      "patches": []
     },
     {
      "id": "all",
-     "label": "Every song unlocked (102 songs)",
+     "label": "Every song unlocked (101 songs)",
      "data": [
       "banks_restored",
       "songlist_yesterday",

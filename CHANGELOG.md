@@ -2,6 +2,16 @@
 
 The newest version first. A release's notes are its section of this file, and are what the launcher shows before an update.
 
+## 1.0.1
+
+**Content**
+- The song counts corrected to what the song select shows: 78 in Konami's list, 101 with every song unlocked (YESTERDAY and the dance lesson included). They said 80 and 102.
+
+**The launcher**
+- The window's title shows the version you have (KDMSENSOR 1.0.1).
+- Check for updates always answers in a window: you have the latest version, or why it could not look.
+- A Changelog link beside Check for updates opens every version's changes on GitHub.
+
 ## 1.0.0
 
 The first public release. It carries every change made since the first pack (3 November 2026).
@@ -16,7 +26,7 @@ The first public release. It carries every change made since the first pack (3 N
 - The controls button is named for what it opens (spice2x settings...).
 
 **Content**
-- Every song unlocked: the 22 songs Konami's last offline build locked, the 20 audio banks it emptied restored, YESTERDAY added (102 songs), a song-select preview for every song with Konami's own fade-out, licensed songs filed under POPULAR and Konami's under KONAMI SONGS as Konami filed them, the `rena` typo fixed.
+- Every song unlocked: the 22 songs Konami's last offline build locked, the 20 audio banks it emptied restored, YESTERDAY added (101 songs in the song select, the dance lesson included), a song-select preview for every song with Konami's own fade-out, licensed songs filed under POPULAR and Konami's under KONAMI SONGS as Konami filed them, the `rena` typo fixed.
 - Language: English, Traditional Chinese or Japanese; English and romanised song titles with the NAME tab running A to Z.
 - Stealth played as Master on the 30 Dance Masters songs.
 - Test mode's screen check scaled at every resolution.

@@ -287,7 +287,13 @@ function Menu {
     $upd = New-Object Windows.Forms.Button -Property @{ Text = "Check for updates"; Width = 130; Height = 30; Enabled = $false }
     $state = New-Object Windows.Forms.Label -Property @{ AutoSize = $true; Margin = New-Object Windows.Forms.Padding(0, 7, 8, 0) }
     $bar.Controls.AddRange(@($play, $keys, $look))
-    if (Get-KdmInstalled $mods) { $bar.Controls.Add($upd) }   # a release install only: the project's own folder has nothing to update
+    if ($installed = Get-KdmInstalled $mods) {   # a release install only: the project's own folder has nothing to update
+        $form.Text += " - KDMSENSOR $($installed.version)"
+        $notes = New-Object Windows.Forms.LinkLabel -Property @{ Text = "Changelog"; AutoSize = $true; Margin = New-Object Windows.Forms.Padding(0, 7, 8, 0) }
+        $notes.Add_LinkClicked({ Start-Process "https://github.com/$script:KdmRepo/releases" })
+        $notes.Add_Enter({ $help.Text = "Changelog: every version's changes on the project's GitHub page, in your browser." })
+        $bar.Controls.AddRange(@($upd, $notes))
+    }
     $bar.Controls.Add($state)
     $intro = "Choose your mods: every change is saved. Each option's first value is Konami's original.`r`n`r`n" +
              "Before your first game: spice2x settings..., to bind your buttons (the cabinet has no keyboard: there are no default buttons)."
@@ -475,7 +481,11 @@ function Menu {
             $form.Enabled = $true
         }
         & $ready
-        if ($manual) { $state.Text = $r.text; if ($r.status -in "offline", "none") { $state.ForeColor = "DarkGoldenrod" } }
+        if ($manual -and $r.status -ne "newer") {   # the button always answers in a window, as programs do
+            $state.Text = $r.text; if ($r.status -in "offline", "none") { $state.ForeColor = "DarkGoldenrod" }
+            $msg = if ($r.status -eq "current") { "You have the latest version, $($inst.version)." } else { $r.text }
+            [void][Windows.Forms.MessageBox]::Show($msg, $form.Text, "OK", $(if ($r.status -eq "current") { "Information" } else { "Warning" }))
+        }
     }
     $upd.Add_Click({ & $checkUpdate $true })
     $upd.Add_Enter({ $help.Text = "Check for updates: looks now at the project's latest release, the same look the launcher makes each time it opens. If a newer version is there it shows what changed, with Update and Not now." })
