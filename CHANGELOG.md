@@ -41,7 +41,7 @@ The first public release. It carries every change made since the first pack (3 N
 - Game mode: credits, free play, event mode. Songs per game: 1 to 4.
 
 **Picture**
-- Native 1080p, 1440p and 2160p (3D, effects, 2D and the camera picture; 1440p and 2160p were not played on a screen of that size), unlimited frame rate with the menus at the cabinet's speed, SMAA, anisotropic x16, render threads.
+- Native 1080p, 1440p and 2160p (3D, effects, 2D and the camera picture; 2160p played on a 4K TV; 1440p not yet played on a screen of that size), unlimited frame rate with the menus at the cabinet's speed, SMAA, anisotropic x16, render threads.
 
 **Attract demo**
 - Master charts, whole songs, every song shuffled, score and combo displayed.

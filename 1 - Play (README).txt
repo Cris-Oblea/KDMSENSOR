@@ -342,8 +342,8 @@
       3840x2160 native
       Rendered natively: 3D, effects, 2D and the camera picture. It is
       not an upscale. Only the sizes your main screen has are listed.
-      1440p and 4K were never played on a screen of that size: please
-      tell us how they look.
+      4K was played on a 4K TV; 1440p was never played on a screen of
+      that size: please tell us how it looks.
 
   Frame rate
       Original: what Konami's game asks for
