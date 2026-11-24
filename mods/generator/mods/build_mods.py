@@ -136,13 +136,13 @@ OPTIONS = [
                 "chart; this makes it copy MASTER, as the arcade's own songs do."),
          values=[dict(id="off", label="Original"),
                  dict(id="on", label="Stealth = master everywhere", data=["stealth"])]),
-    # changes no score, so it works online too (T129, ARCHITECTURE.md 16.7): no lock_online
+    # one value, so always on (T152, the user 2026-11-23): only the server decides, nothing is drawn without an event and no
+    # score changes (T129, ARCHITECTURE.md 16.7), so no lock_online and no menu entry
     dict(id="rankicon", title="Ranking event icon",
          help=txt("When a server runs a ranking event (two songs everyone competes on), the game was meant to mark",
                   "those songs' difficulties with a RANKING! icon in the difficulty select, but never did: Konami's",
                   "build does not load the file that holds the picture. This loads it. Nothing is drawn without an event."),
-         values=[dict(id="off", label="Original (no icon)"),
-                 dict(id="on", label="RANKING! icon on the event's songs", data=["rank_icon"],
+         values=[dict(id="on", label="RANKING! icon on the event's songs", data=["rank_icon"],
                       code=[("gamekdm.dll", "mods/content/rank_icon.py", ["--apply"])])]),
     # no lock_online (T149, the user 2026-11-23): it changes no score, and it is set the way an operator sets it: FREE PLAY is
     # written into the player's saved settings as the service menu writes it (`nvram`, play_mods.ps1 GameSettings; nvram.py),
@@ -264,11 +264,11 @@ OPTIONS = [
 # The menu's order: every option in exactly one sector (checked in build()).
 AUTO = "Support (switched on by the options that need it)"
 SECTORS = [("Sensor", ["sensor", "sensorload"]),
-           ("Content", ["language", "songs", "titles", "stealth", "rankicon"]),
+           ("Content", ["language", "songs", "titles", "stealth"]),
            ("Game rules", ["eventmode", "stages"]),
            ("Picture", ["resolution", "refresh", "smaa", "aniso"]),
            # part of the options that need them, never a choice of their own (the user, 2026-10-27): not in the menu
-           (AUTO, ["soundheap", "soundpath", "laa"]),
+           (AUTO, ["soundheap", "soundpath", "laa", "rankicon"]),
            ("Attract demo", ["demo_master", "demo_songs", "demo_shuffle", "demo_hud"]),
            ("Advanced", ["workers", "verbose"])]
 

@@ -19,7 +19,7 @@
 # Windows PowerShell 5.1 and WinForms on purpose: every player has them, nothing to install.
 # Every path goes to the cmdlets as -LiteralPath: a game folder named "[KDM] ..." is a wildcard to them otherwise, and
 # the launcher could not read its own files. The file stays ASCII: PowerShell 5.1 reads it in the PC's own code page.
-param([string]$Select = "", [switch]$NoLaunch, [switch]$Elevated)
+param([string]$Select = "", [switch]$NoLaunch, [switch]$Elevated, [switch]$NoOnlineLock)   # -NoOnlineLock: TEST runs only (trace.ps1 -Unlocked), the lock below is skipped
 
 $ErrorActionPreference = "Stop"
 Add-Type -AssemblyName System.Windows.Forms, System.Drawing
@@ -262,7 +262,7 @@ function ServerUrl {
     } catch { return "" }
     if ($u -match '^https?://(localhost|127\.0\.0\.1):8080/?$') { "" } else { $u }
 }
-function OnlineLocked { if (ServerUrl) { @($cat.options | Where-Object { $_.PSObject.Properties["lock_online"] }) } else { @() } }
+function OnlineLocked { if ((ServerUrl) -and -not $NoOnlineLock) { @($cat.options | Where-Object { $_.PSObject.Properties["lock_online"] }) } else { @() } }
 # the selection as the game gets it: the choice, with the locked options at Konami's value
 function Eff { $e = $script:sel.Clone(); foreach ($o in (OnlineLocked)) { $e[$o.id] = $o.values[0].id }; $e }
 

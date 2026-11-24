@@ -308,15 +308,6 @@
       with players who keep Original, and keep Original yourself if
       your scores go to a shared ranking.
 
-  Ranking event icon
-      Original (no icon)  |  RANKING! icon on the event's songs
-      When a server runs a ranking event (two songs everyone competes
-      on), the game was meant to mark those songs' difficulties with a
-      RANKING! icon in the difficulty select, but Konami's build never
-      loads the file that holds the picture. This loads it. It changes
-      no score, so it is fine on a server too; without an event nothing
-      is drawn.
-
 
   GAME RULES
   ----------
@@ -411,6 +402,12 @@
       crashes.
     - More sound memory and the sound folder "mods\snd", switched on by
       "Every song unlocked", which needs them.
+    - The ranking event's RANKING! icon. When a server runs a ranking
+      event (two songs everyone competes on), the game was meant to mark
+      those songs' difficulties with it in the difficulty select, but
+      Konami's build never loads the file that holds the picture. This
+      loads it. It changes no score, so it is fine on a server too;
+      without an event nothing is drawn.
     - Two Windows Firewall rules for the launcher's copy of spice.exe
       (allowed on private networks, blocked on public ones), so Windows
       never interrupts the first game to ask. It is the only thing the

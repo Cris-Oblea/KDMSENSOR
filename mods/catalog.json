@@ -492,35 +492,6 @@
    "auto": false
   },
   {
-   "id": "rankicon",
-   "title": "Ranking event icon",
-   "help": "When a server runs a ranking event (two songs everyone competes on), the game was meant to mark those songs' difficulties with a RANKING! icon in the difficulty select, but never did: Konami's build does not load the file that holds the picture. This loads it. Nothing is drawn without an event.",
-   "values": [
-    {
-     "id": "off",
-     "label": "Original (no icon)",
-     "patches": []
-    },
-    {
-     "id": "on",
-     "label": "RANKING! icon on the event's songs",
-     "data": [
-      "rank_icon"
-     ],
-     "patches": [
-      {
-       "dllName": "gamekdm.dll",
-       "offset": 346837,
-       "dataDisabled": "10",
-       "dataEnabled": "1c"
-      }
-     ]
-    }
-   ],
-   "sector": "Content",
-   "auto": false
-  },
-  {
    "id": "eventmode",
    "title": "Game mode",
    "help": "How a game is paid and timed, set as the arcade's operator sets it in the service menu (free play in COIN OPTIONS, then EVENT MODE): the same state, written for you. Original: your game's settings stay as they are. Credits: coins, as the arcade. Free play: the same game without credits. Event mode, the operator setting for shows and parties: free play with the clocks frozen (no time limit, no game over between songs); the arcade switches it off at every boot, this keeps it on. Credits and Free play are saved in your game's settings, so Original afterwards keeps the last one.",
@@ -3072,6 +3043,30 @@
      "label": "4 GB",
      "laa": true,
      "patches": []
+    }
+   ],
+   "sector": "Support (switched on by the options that need it)",
+   "auto": true
+  },
+  {
+   "id": "rankicon",
+   "title": "Ranking event icon",
+   "help": "When a server runs a ranking event (two songs everyone competes on), the game was meant to mark those songs' difficulties with a RANKING! icon in the difficulty select, but never did: Konami's build does not load the file that holds the picture. This loads it. Nothing is drawn without an event.",
+   "values": [
+    {
+     "id": "on",
+     "label": "RANKING! icon on the event's songs",
+     "data": [
+      "rank_icon"
+     ],
+     "patches": [
+      {
+       "dllName": "gamekdm.dll",
+       "offset": 346837,
+       "dataDisabled": "10",
+       "dataEnabled": "1c"
+      }
+     ]
     }
    ],
    "sector": "Support (switched on by the options that need it)",
