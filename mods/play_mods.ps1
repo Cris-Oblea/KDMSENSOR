@@ -849,7 +849,7 @@ $pcbidTail = "DE" + $(if ($eff["sensor"] -eq "webcam") { "1" } else { "0" }) + $
 # D Kinect + Konami's Song list, E Kinect + every song, F camera + Konami's, G camera + every song. Konami's own letter is A.
 $revMark = [string]"DEFG"[2 * [int]($eff["sensor"] -eq "webcam") + [int]($eff["songs"] -eq "all")]
 @{ args = $spiceArgs; env = $envs; pcbid_tail = $pcbidTail; rev_mark = $revMark } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $active "launch.json")   # for trace.ps1 -Mods
-# Only for a server on this PC or its own network (the DEAC plugin's core): a public network (RyuNET) knows the machine by the PCBID it
+# Only for a server on this PC or its own network (the DEAC plugin's core): a public network knows the machine by the PCBID it
 # registered, so that one is never changed, and its model is left as Konami's too (its own plugin is unread: the user decides when a public server
 # is to get the mark). Offline the game keeps the player's p too. spice2x takes the settings FILE's p over a
 # command-line -p (measured 2026-11-22: the game sent the file's), so the mark goes into a copy of the file in mods\active that -cfgpath points to;
